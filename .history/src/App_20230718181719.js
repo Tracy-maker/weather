@@ -22,9 +22,7 @@ const BackgroundCard = styled(Container)`
 `;
 
 const ShowCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
+  display:flex;
   width: 800px;
   height: 600px;
   background-color: white;
@@ -33,6 +31,7 @@ const ShowCard = styled(Card)`
 `;
 const CardBottom = styled(CardContent)`
   display: flex;
+  
 `;
 
 function App() {

@@ -6,33 +6,27 @@ import Forecast from "./components/Forecast/forecast";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardActionArea, Container } from "@mui/material";
-import pic1 from "./assets/background2.jpg";
-import pic2 from "./assets/background1.png";
+import pic1 from './assets/background2.jpg'
+import pic2 from './assets/background1.jpg'
 
 const BackgroundCard = styled(Container)`
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  background-image: url(${pic1});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+height: 100vh;
+width: 100%;
+display: flex;
+align-items: stretch;
+justify-content: center;
+background-image: url(${pic2});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
 `;
 
 const ShowCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
   width: 800px;
   height: 600px;
   background-color: white;
   border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0 0 0 / 50%);
-`;
-const CardBottom = styled(CardContent)`
-  display: flex;
+  box-shadow: 0 0 16px rgb(0 0 0 /50%);
 `;
 
 function App() {
@@ -41,10 +35,10 @@ function App() {
       <ShowCard>
         <CardActionArea>
           <City />
-          <CardBottom>
+          <CardContent>
             <OtherCities />
             <Forecast />
-          </CardBottom>
+          </CardContent>
         </CardActionArea>
       </ShowCard>
     </BackgroundCard>

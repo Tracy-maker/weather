@@ -22,17 +22,14 @@ const BackgroundCard = styled(Container)`
 `;
 
 const ShowCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
   width: 800px;
   height: 600px;
   background-color: white;
   border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0 0 0 / 50%);
+  box-shadow: 0 0 16px rgb(0 0 0 /50%);
 `;
-const CardBottom = styled(CardContent)`
-  display: flex;
+const CardBottom =styled(CardContent)`
+display:flex;
 `;
 
 function App() {
@@ -41,10 +38,10 @@ function App() {
       <ShowCard>
         <CardActionArea>
           <City />
-          <CardBottom>
+          <CardContent>
             <OtherCities />
             <Forecast />
-          </CardBottom>
+          </CardContent>
         </CardActionArea>
       </ShowCard>
     </BackgroundCard>

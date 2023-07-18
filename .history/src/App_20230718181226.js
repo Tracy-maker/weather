@@ -16,15 +16,12 @@ const BackgroundCard = styled(Container)`
   align-items: stretch;
   justify-content: center;
   background-image: url(${pic1});
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center center;
 `;
 
 const ShowCard = styled(Card)`
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
   width: 800px;
   height: 600px;
   background-color: white;
@@ -33,6 +30,7 @@ const ShowCard = styled(Card)`
 `;
 const CardBottom = styled(CardContent)`
   display: flex;
+  
 `;
 
 function App() {
