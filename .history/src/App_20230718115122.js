@@ -12,29 +12,39 @@ import { CardActionArea, Container } from "@mui/material";
 const BackgroundCard = styled(Container)`
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items:center;
+  height:100vh;
   background-image: url(https://wallpaperaccess.com/full/2629319.png);
-  background-size: cover;
+  background-size:cover;
 `;
 
-const ShowCard = styled(Card)`
-  width: 800px;
-  height: 600px;
-  background-color: white;
-  border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0 0 0 /50%);
+const ShowCard=styled(Card)`
+width:800px;
+height:600px;
+background-color:white;
+bi
+
 `;
 
 function App() {
   return (
-    <BackgroundCard >
+    <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-          <City />
+          <CardMedia
+            component="img"
+            height="140"
+            image="/static/images/cards/contemplative-reptile.jpg"
+            alt="green iguana"
+          />
           <CardContent>
-            <OtherCities />
-            <Forecast />
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
           </CardContent>
         </CardActionArea>
       </ShowCard>

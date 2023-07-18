@@ -23,18 +23,19 @@ const ShowCard = styled(Card)`
   height: 600px;
   background-color: white;
   border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0 0 0 /50%);
+  box-shadow:0 0 16px rgb(0 0 0 /50%);
 `;
 
 function App() {
   return (
-    <BackgroundCard >
+    <BackgroundCard maxWidth="sm">
+    
       <ShowCard>
         <CardActionArea>
-          <City />
+         <City/>
           <CardContent>
-            <OtherCities />
-            <Forecast />
+       <OtherCities/>
+       <Forecast/>
           </CardContent>
         </CardActionArea>
       </ShowCard>

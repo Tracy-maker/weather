@@ -23,18 +23,28 @@ const ShowCard = styled(Card)`
   height: 600px;
   background-color: white;
   border-radius: 32px;
-  box-shadow: 0 0 16px rgb(0 0 0 /50%);
+  box-shadow:0 0 16px rgb(0 0 0 /50%);
 `;
 
 function App() {
   return (
-    <BackgroundCard >
+    <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-          <City />
+          <CardMedia
+            component="img"
+            height="140"
+            image="/static/images/cards/contemplative-reptile.jpg"
+            alt="green iguana"
+          />
           <CardContent>
-            <OtherCities />
-            <Forecast />
+            <Typography gutterBottom variant="h5" component="div">
+              Lizard
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lizards are a widespread group of squamate reptiles, with over
+              6,000 species, ranging across all continents except Antarctica
+            </Typography>
           </CardContent>
         </CardActionArea>
       </ShowCard>
