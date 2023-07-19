@@ -1,7 +1,7 @@
 import Weather from "./components/Weather/Weather";
 import Name from "./components/Name/Name";
 import { styled } from "styled-components";
-import { Container } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import p2 from "../../assets/background2.jpg";
 
 const CardContainer = styled(Container)`
@@ -14,11 +14,21 @@ const CardContainer = styled(Container)`
   position: relative;
 `;
 
+const Strip = styled(Box)`
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+`;
+
 function City() {
   return (
     <CardContainer>
       <Weather />
       <Name />
+      <Strip />
     </CardContainer>
   );
 }
