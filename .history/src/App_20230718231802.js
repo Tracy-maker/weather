@@ -1,7 +1,7 @@
 import * as React from "react";
 import { styled } from "styled-components";
 import City from "./components/City/City";
-import OtherCities from "./components/OtherCities/OtherCities";
+import OtherCities from "./components/OtherCities/otherCities";
 import Forecast from "./components/Forecast/Forecast";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

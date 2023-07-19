@@ -1,8 +1,8 @@
-import Weather from "./components/Weather/Weather";
+import Weather from "./components/Weather/weather";
 import Name from "./components/Name/Name";
 
 
-function City() {
+function city() {
   return (
     <div>
       <Weather />
@@ -10,4 +10,4 @@ function City() {
     </div>
   );
 }
-export default City;
+export default city;
