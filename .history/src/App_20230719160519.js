@@ -18,7 +18,7 @@ const BackgroundCard = styled(Container)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top:45px;
+  padding-top:45px
 `;
 
 const ShowCard = styled(Card)`

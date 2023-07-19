@@ -8,10 +8,7 @@ const CardContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
   padding: 64px 96px;
-  background-image: url(${p2});
-  background-size: cover;
-  color: white;
-  position: relative;
+  background-image:url(${p2})
 `;
 
 function City() {

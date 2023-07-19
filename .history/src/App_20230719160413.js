@@ -8,6 +8,7 @@ import CardContent from "@mui/material/CardContent";
 import { CardActionArea, Container } from "@mui/material";
 import p1 from "./assets/background1.png";
 
+
 const BackgroundCard = styled(Container)`
   height: 100vh;
   width: 100%;
@@ -18,11 +19,12 @@ const BackgroundCard = styled(Container)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top:45px;
+
+
 `;
 
 const ShowCard = styled(Card)`
-  margin: auto;
+margin:auto;
   width: 800px;
   height: 600px;
   background-color: white;
