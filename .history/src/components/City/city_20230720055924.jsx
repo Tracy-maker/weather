@@ -1,10 +1,10 @@
 import Weather from "./components/Weather/Weather";
 import Name from "./components/Name/Name";
 import { styled } from "styled-components";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import p2 from "../../assets/background2.jpg";
 
-const CardContent = styled(Box)`
+const CardContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
   padding: 64px 96px;
@@ -25,11 +25,11 @@ const Strip = styled(Box)`
 
 function City() {
   return (
-    <CardContent>
+    <CardContainer>
       <Weather />
       <Name />
       <Strip />
-    </CardContent>
+    </CardContainer>
   );
 }
 export default City;
