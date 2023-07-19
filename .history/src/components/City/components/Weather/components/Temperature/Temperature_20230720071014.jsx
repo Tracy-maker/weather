@@ -2,10 +2,10 @@ import { styled } from "styled-components";
 import { Box } from "@mui/material";
 
 const TemperatureNumber = styled(Box)`
-  font-size: 5rem;
+  font-size: 3rem;
 `;
 
 function Temperature() {
-  return <TemperatureNumber>23.66゜</TemperatureNumber>;
+  return <TemperatureNumber>Temperature</TemperatureNumber>;
 }
 export default Temperature;
