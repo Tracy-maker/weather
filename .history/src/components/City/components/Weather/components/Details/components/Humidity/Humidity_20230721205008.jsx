@@ -6,20 +6,12 @@ const HumidityContainer = styled(Box)`
   opacity: 0.7;
 `;
 
-const Value= styled(Typography)`
-margin-top:16px;
-
-`
-
 function Humidity() {
   return (
     <HumidityContainer>
-      <Typography variant="h6">
+      <Typography variant="h6" component="h7">
         Humidity
       </Typography>
-      <Value>
-       58%
-      </Value>
     </HumidityContainer>
   );
 }

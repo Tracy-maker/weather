@@ -18,7 +18,7 @@ function Humidity() {
         Humidity
       </Typography>
       <Value>
-       58%
+        Humidity
       </Value>
     </HumidityContainer>
   );
