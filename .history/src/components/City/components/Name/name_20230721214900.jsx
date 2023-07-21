@@ -5,7 +5,6 @@ const CityName = styled(Box)`
   font-size: 2rem;
   font-weight: 500;
   position: relative;
-  color:black;
 
   &::after {
     content: "";
@@ -15,7 +14,7 @@ const CityName = styled(Box)`
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    background-color: black;
+  
   }
 `;
 
