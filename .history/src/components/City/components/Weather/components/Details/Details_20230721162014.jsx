@@ -18,7 +18,7 @@ function Details() {
   return (
     <DetailsContainer>
       <Humidity />
-      <DividerLine />
+      <Divider/>
       <Wind/>
     </DetailsContainer>
   );
