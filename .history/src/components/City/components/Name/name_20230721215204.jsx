@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import styled from "styled-components";
 
 const CityName = styled(Box)`
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
   position: relative;
   color:black;
