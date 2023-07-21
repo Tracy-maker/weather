@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Box, Divider } from "@mui/material";
-import Item from "./components/Item/Item";
+import Humidity from "./components/Humidity/Humidity";
+import Wind from "./components/Wind/Wind";
 
 const DetailsContainer = styled(Box)`
   margin-top: 32px;
@@ -16,9 +17,9 @@ const DividerLine = styled(Divider)`
 function Details() {
   return (
     <DetailsContainer>
-      <Item title="HUMIDITY">57%</Item>
+      <Humidity />
       <DividerLine />
-      <Item title="WIND">3.6K/M</Item>
+      <Wind/>
     </DetailsContainer>
   );
 }
