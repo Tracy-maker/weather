@@ -10,7 +10,7 @@ const Condition = styled(Box)`
 text-align:center;
 font-size:1.5rem;
 letter-spacing:5px;
-margin-top: 0.25rem;
+margin-top: 0.25rem
 color:rgb(255,255,255,0.7);
 `;
 
@@ -18,7 +18,7 @@ function Weather() {
   return (
     <div>
       <Temperature>23.66゜</Temperature>
-      <Condition>Clouds</Condition>
+      <Condition />
       <Details />
     </div>
   );

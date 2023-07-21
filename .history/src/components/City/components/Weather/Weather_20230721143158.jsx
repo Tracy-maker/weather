@@ -18,7 +18,7 @@ function Weather() {
   return (
     <div>
       <Temperature>23.66゜</Temperature>
-      <Condition>Clouds</Condition>
+      <Condition />
       <Details />
     </div>
   );
