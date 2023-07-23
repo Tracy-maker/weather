@@ -16,7 +16,7 @@ color:rgb(255,255,255,0.7);
 `;
 
 const getWeather=()=>{
-  const xhttp = new XMLHttpRequest()
+  const xhttp = new XHLHttpRequest()
 
   xhttp.onreadystatechange=function(){
     if(this.readyState===4&&this.status===200){

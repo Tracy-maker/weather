@@ -16,7 +16,7 @@ color:rgb(255,255,255,0.7);
 `;
 
 const getWeather=()=>{
-  const xhttp = new XMLHttpRequest()
+  const xhttp = new XHLHttpRequest()
 
   xhttp.onreadystatechange=function(){
     if(this.readyState===4&&this.status===200){
@@ -25,10 +25,10 @@ const getWeather=()=>{
   }
 
   const cityId =2158177
-  const appId='2466213f21b4b723d341e00a430a7673'
+  const appId=''
 
   xhttp.open('GET',`
-  https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`,true)
+  https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=`)
   xhttp.send()
 }
 
