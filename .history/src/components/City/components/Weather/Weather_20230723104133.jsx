@@ -17,12 +17,11 @@ color:rgb(255,255,255,0.7);
 
 function Weather() {
 const [temperature,setTemperature]=useState();
-const [condition,setCondition]=useState();
 
   return (
     <div>
-      <Temperature>{`${temperature}゜`}</Temperature>
-      <Condition>{condition}</Condition>
+      <Temperature>23.66゜</Temperature>
+      <Condition>Clouds</Condition>
       <Details />
     </div>
   );

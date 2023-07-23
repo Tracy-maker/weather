@@ -5,7 +5,7 @@ const CityName = styled(Box)`
   font-size: 2.5rem;
   font-weight: 500;
   position: relative;
-
+  color: #fffafa;
 
   &::after {
     content: "";

@@ -21,8 +21,8 @@ const [condition,setCondition]=useState();
 
   return (
     <div>
-      <Temperature>{`${temperature}゜`}</Temperature>
-      <Condition>{condition}</Condition>
+      <Temperature>23.66゜</Temperature>
+      <Condition>Clouds</Condition>
       <Details />
     </div>
   );
