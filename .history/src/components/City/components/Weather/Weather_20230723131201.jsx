@@ -44,7 +44,7 @@ function Weather() {
     getWeather((data) => {
       setTemperature(data.main.temp);
       setCondition(data.weather[0].main);
-    })
+    });
   }, []);
 
   return (

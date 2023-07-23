@@ -33,7 +33,7 @@ const getWeather = () => {
     `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`,
     true
   );
-  xhttp.send()
+  xhttp.send();
 };
 
 function Weather() {
@@ -44,7 +44,7 @@ function Weather() {
     getWeather((data) => {
       setTemperature(data.main.temp);
       setCondition(data.weather[0].main);
-    })
+    });
   }, []);
 
   return (
