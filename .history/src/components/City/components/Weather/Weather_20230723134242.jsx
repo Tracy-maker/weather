@@ -31,7 +31,8 @@ const getWeather = () => {
   xhttp.open(
     'GET',
     `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`,
-    true)
+    true
+  )
   xhttp.send()
 };
 

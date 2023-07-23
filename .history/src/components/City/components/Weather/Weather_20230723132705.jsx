@@ -25,13 +25,14 @@ const getWeather = () => {
     }
   };
 
-  const cityId = 2158177
-  const appId = '2466213f21b4b723d341e00a430a7673'
+  const cityId = 2158177;
+  const appId = '2466213f21b4b723d341e00a430a7673';
 
   xhttp.open(
     'GET',
     `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`,
-    true)
+    true
+  );
   xhttp.send()
 };
 
@@ -42,7 +43,7 @@ function Weather() {
   useEffect(() => {
     getWeather((data) => {
       setTemperature(data.main.temp);
-      setCondition(data.weather[0].main);
+      setCondition(data.Weather[0].main);
     })
   }, []);
 
