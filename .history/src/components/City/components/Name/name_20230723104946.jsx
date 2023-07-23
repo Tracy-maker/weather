@@ -1,5 +1,4 @@
 import { Box } from "@mui/material";
-import { useState } from "react";
 import styled from "styled-components";
 
 const CityName = styled(Box)`
@@ -20,9 +19,6 @@ const CityName = styled(Box)`
 `;
 
 function Name() {
-const[name,setName]=useState();
-
-
-  return <CityName>{name}</CityName>;
+  return <CityName>Melbourne</CityName>;
 }
 export default Name;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Box, Divider } from "@mui/material";
 import Item from "./components/Item/Item";
-import { useState } from "react";
 
 const DetailsContainer = styled(Box)`
   margin-top: 32px;
@@ -16,13 +15,12 @@ const DividerLine = styled(Divider)`
 
 function Details() {
 const [humidity, setHumidity]=useState();
-const [wind,setWind]=useState();
 
   return (
     <DetailsContainer>
-      <Item title="HUMIDITY">{`${humidity}%`}</Item>
+      <Item title="HUMIDITY">57%</Item>
       <DividerLine />
-      <Item title="WIND">{`${wind}`}K/M</Item>
+      <Item title="WIND">3.6K/M</Item>
     </DetailsContainer>
   );
 }

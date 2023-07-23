@@ -20,9 +20,9 @@ const [wind,setWind]=useState();
 
   return (
     <DetailsContainer>
-      <Item title="HUMIDITY">{`${humidity}%`}</Item>
+      <Item title="HUMIDITY">57%</Item>
       <DividerLine />
-      <Item title="WIND">{`${wind}`}K/M</Item>
+      <Item title="WIND">3.6K/M</Item>
     </DetailsContainer>
   );
 }
