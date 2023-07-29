@@ -16,27 +16,36 @@ const Condition = styled(Box)`
   color: rgb(255, 255, 255, 0.7);
 `;
 
+
+
 function Weather() {
   const [temperature, setTemperature] = useState();
   const [condition, setCondition] = useState();
 
   const getWeather = async () => {
+    // const xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function () {
+    //   if (this.readyState === 4 && this.status === 200) {
+    //     const data = JSON.parse(this.responseText);
+    //     console.log(data);
+    //   }
+    // };
+  
     const cityId = 2158177;
     const appId = "1bf06f9e357bb376f67992e64e38314c";
-
-    try {
-      const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`
-      );
-      setTemperature(response.data.main.temp);
-      setCondition(response.data.weather[0].main);
-    } catch (error) {
-      console.log('Error fetching weather data:',error);
-    }
+  
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`
+    );
+  
   };
 
+
   useEffect(() => {
-    getWeather();
+    getWeather((data) => {
+      setTemperature(data.main.temp);
+      setCondition(data.weather[0].main);
+    });
   }, []);
 
   return (
