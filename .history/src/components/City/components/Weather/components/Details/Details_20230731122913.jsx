@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Box, Divider } from "@mui/material";
 import Item from "./components/Item/Item";
-import { useState,useEffect} from "react";
+import { useState } from "react";
 import getWeather from "../../../../../../utils/getWeather/getWeather";
 
 const DetailsContainer = styled(Box)`
@@ -16,15 +16,13 @@ const DividerLine = styled(Divider)`
 `;
 
 function Details() {
-  const [humidity, setHumidity] = useState();
-  const [wind, setWind] = useState();
+const [humidity, setHumidity]=useState();
+const [wind,setWind]=useState();
 
-  useEffect(() => {
-    getWeather((data) => {
-      setHumidity(data.main.humidity);
-      setWind(data.wind.speed);
-    });
-  }, []);
+getWeather((data)=>{
+  setHumidity(data.main.humidity)
+  setWind(data.wind.speed)
+})
 
   return (
     <DetailsContainer>

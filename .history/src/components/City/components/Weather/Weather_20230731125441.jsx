@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import getWeather from "../../../../utils/getWeather/getWeather";
 
 const Temperature = styled(Box)`
   font-size: 5rem;
@@ -17,6 +16,27 @@ const Condition = styled(Box)`
   color: rgb(255, 255, 255, 0.7);
 `;
 
+const getWeather=(onSuccess)=>{
+  const xhttp=new XMLHttpRequest()
+
+  xhttp.onreadystatechange=function(){
+      if(this.readyState===4 && this.status===200){
+          const data =JSON.parse(this.responseText)
+
+          onSuccess(data)
+      }
+  }
+
+  const cityId = 2158177;
+  const appId = "1bf06f9e357bb376f67992e64e38314c";
+
+
+    xhttp.open(
+      `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`
+    );
+    xhttp.send();
+
+};
 
 function Weather() {
   const [temperature, setTemperature] = useState();

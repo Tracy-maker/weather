@@ -16,18 +16,18 @@ const CityName = styled(Box)`
     transform: translateX(-50%);
     width: 50%;
     height: 2px;
-    background-color: white;
+    background-color: black;
   }
 `;
 
 function Name() {
-  const [name, setName] = useState();
+const[name,setName]=useState();
 
-  useEffect(() => {
-    getWeather((data) => {
-      setName(data.name);
-    })
-  }, []);
+useEffect(()=>{
+  getWeather((data)=>{
+    setName(data.name)
+  })
+},[])
 
   return <CityName>{name}</CityName>;
 }
