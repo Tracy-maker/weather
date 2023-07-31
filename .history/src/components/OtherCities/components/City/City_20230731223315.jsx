@@ -6,7 +6,6 @@ import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Button)`
   font-size: 1rem;
-  textTransform: 'none';
 `;
 
 function City() {
