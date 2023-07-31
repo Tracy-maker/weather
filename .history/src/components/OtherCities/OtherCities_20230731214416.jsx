@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Box, Typography } from "@mui/material";
-import City from "./components/City/City";
+import { Box,Typography } from "@mui/material";
 
 const OtherCitiesContainer = styled(Box)`
   padding: 10px 45px;
@@ -9,10 +8,7 @@ const OtherCitiesContainer = styled(Box)`
 function OtherCities() {
   return (
     <OtherCitiesContainer>
-      <Typography variant="h6">Other Cities</Typography>
-      <City />
-      <City />
-      <City />
+      <Typography variant="h6" >Other Cities</Typography>
     </OtherCitiesContainer>
   );
 }

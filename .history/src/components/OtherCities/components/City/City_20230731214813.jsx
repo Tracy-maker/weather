@@ -1,7 +1,6 @@
 function City(){
-    return(
     <div>city</div>
-    )
+    <div>city</div>
 
 }
 export default City
