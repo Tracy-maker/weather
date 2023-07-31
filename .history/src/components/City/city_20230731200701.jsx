@@ -9,7 +9,7 @@ import getWeather from "../../utils/getWeather/getWeather";
 const CardContentTop = styled(Box)`
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items:flex-start;
   padding: 64px 96px;
   background-image: url(${p2});
   background-size: cover;
@@ -27,25 +27,16 @@ const Strip = styled(Box)`
 `;
 
 function City() {
-  const [data, setData] = useState();
+  const [data, setData]=useState()
 
-  useEffect(() => {
-    getWeather(setData);
-  }, []);
-
+  useEffect(()=>{
+    getWeather(setData)
+  },[])
+  
   return (
     <CardContentTop>
-      {data&&(
-        <>
-      <Weather
-        temperature={data.main.temp}
-        condition={data.weather[0].main}
-        humidity={data.main.humidity}
-        wind={data.wind.speed}
-      />
-      <Name name={data.name} />
-      </>
-      )}
+      <Weather temperature={data.main.temp} condition={data.weather[0].main} humidity={data.main.humidity} wind={data.wind.speed}/>
+      <Name name={data.name}/>
       <Strip />
     </CardContentTop>
   );

@@ -35,8 +35,6 @@ function City() {
 
   return (
     <CardContentTop>
-      {data&&(
-        <>
       <Weather
         temperature={data.main.temp}
         condition={data.weather[0].main}
@@ -44,8 +42,6 @@ function City() {
         wind={data.wind.speed}
       />
       <Name name={data.name} />
-      </>
-      )}
       <Strip />
     </CardContentTop>
   );
