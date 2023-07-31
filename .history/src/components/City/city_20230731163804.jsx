@@ -3,8 +3,6 @@ import Name from "./components/Name/Name";
 import { styled } from "styled-components";
 import { Box } from "@mui/material";
 import p2 from "../../assets/background2.jpg";
-import { useEffect, useState } from "react";
-import getWeather from "../../utils/getWeather/getWeather";
 
 const CardContentTop = styled(Box)`
   display: flex;
@@ -27,26 +25,9 @@ const Strip = styled(Box)`
 `;
 
 function City() {
-
-  const [temperature, setTemperature] = useState();
-  const [condition, setCondition] = useState();
-  const [humidity, setHumidity] = useState();
-  const [wind, setWind] = useState();
-  const [name, setName] =useState();
-
-  useEffect(() => {
-    getWeather((data)=>{
-      setTemperature(data.main.temp)
-      setCondition(data.weather[0].main)
-      setHumidity(data.main.humidity)
-      setWind(data.wind.speed)
-      setName(data.name)
-    });
-  }, []);
-
   return (
     <CardContentTop>
-      <Weather temperature={temperature} condition={condition} humidity={humidity} wind={wind}/>
+      <Weather />
       <Name name={name}/>
       <Strip />
     </CardContentTop>

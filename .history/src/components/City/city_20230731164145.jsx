@@ -3,7 +3,7 @@ import Name from "./components/Name/Name";
 import { styled } from "styled-components";
 import { Box } from "@mui/material";
 import p2 from "../../assets/background2.jpg";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import getWeather from "../../utils/getWeather/getWeather";
 
 const CardContentTop = styled(Box)`
@@ -32,7 +32,6 @@ function City() {
   const [condition, setCondition] = useState();
   const [humidity, setHumidity] = useState();
   const [wind, setWind] = useState();
-  const [name, setName] =useState();
 
   useEffect(() => {
     getWeather((data)=>{

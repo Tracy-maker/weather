@@ -15,11 +15,12 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-function Details({humidity,wind}) {
+function Details(humidity,wind) {
 
   return (
     <DetailsContainer>
       <Item title="HUMIDITY">{`${humidity}%`}</Item>
+      console.log(humidity)
       <DividerLine />
       <Item title="WIND">{`${wind}`}K/M</Item>
     </DetailsContainer>

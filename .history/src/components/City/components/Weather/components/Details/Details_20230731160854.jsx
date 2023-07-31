@@ -15,7 +15,7 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-function Details({humidity,wind}) {
+function Details(humidity,wind) {
 
   return (
     <DetailsContainer>

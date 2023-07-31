@@ -18,8 +18,20 @@ const Condition = styled(Box)`
 `;
 
 
-function Weather({temperature,condition,wind,humidity}) {
-  
+function Weather() {
+  const [temperature, setTemperature] = useState();
+  const [condition, setCondition] = useState();
+  const [humidity, setHumidity] = useState();
+  const [wind, setWind] = useState();
+
+  useEffect(() => {
+    getWeather((data)=>{
+      setTemperature(data.main.temp)
+      setCondition(data.weather[0].main)
+      setHumidity(data.main.humidity)
+      setWind(data.wind.speed)
+    });
+  }, []);
 
   return (
     <div>

@@ -21,7 +21,10 @@ const CityName = styled(Box)`
 `;
 
 function Name({name}) {
-  
+  const [name, setName] = useState();
+
+
+
   return <CityName>{name}</CityName>;
 }
 export default Name;
