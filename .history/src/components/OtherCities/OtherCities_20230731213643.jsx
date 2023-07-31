@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Box } from "@mui/material";
 
 const OtherCitiesContainer = styled(Box)`
-  padding: 27px 50px;
+  padding: 30px 40px;
 `;
 
 function OtherCities() {
