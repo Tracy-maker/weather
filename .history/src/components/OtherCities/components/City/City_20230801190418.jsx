@@ -10,8 +10,7 @@ const CityList = styled(Button)`
 const CityName = styled(Typography)`
   width: 120px;
   color: #696969;
-  text-align: left;
-  margin-right:0.5rem;
+  text-align: left ;
 
 `;
 
@@ -21,12 +20,12 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function City({name,temperature,weather}) {
+function City({name,temperature}) {
   return (
     <CityList>
       <CityName variant="h6">{name}</CityName>
       <CityTemperature variant="h6">{`${temperature}゜`}</CityTemperature>
-      <ConditionImage weather={weather} />
+      <ConditionImage />
     </CityList>
   );
 }

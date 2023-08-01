@@ -5,11 +5,11 @@ const Image = styled.img`
   height: 50px;
 `;
 
-function ConditionImage({weather}) {
+function ConditionImage() {
   return (
     <Image
-      src={`http://openweathermap.org/img/wn/${weather.icon}.png`}
-      alt={weather.main}
+      src="http://openweathermap.org/img/wn/${weather.icon}.png"
+      alt="Rain"
     />
   );
 }

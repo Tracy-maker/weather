@@ -9,7 +9,7 @@ function ConditionImage({weather}) {
   return (
     <Image
       src={`http://openweathermap.org/img/wn/${weather.icon}.png`}
-      alt={weather.main}
+      alt="Rain"
     />
   );
 }

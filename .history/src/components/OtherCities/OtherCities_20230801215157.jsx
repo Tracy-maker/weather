@@ -19,8 +19,8 @@ function OtherCities() {
   return (
     <OtherCitiesContainer spacing={1}>
       <Title variant="h6">OTHER CITIES</Title>
-      {Cities.map(({ id, name, temperature,weather }) => (
-        <City key={id} name={name} temperature={temperature} weather={weather} />
+      {Cities.map(({ id, name, temperature }) => (
+        <City key={id} name={name} temperature={temperature} />
       ))}
     </OtherCitiesContainer>
   );

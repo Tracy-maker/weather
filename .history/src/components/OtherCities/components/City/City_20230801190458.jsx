@@ -21,12 +21,12 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function City({name,temperature,weather}) {
+function City({name,temperature}) {
   return (
     <CityList>
       <CityName variant="h6">{name}</CityName>
       <CityTemperature variant="h6">{`${temperature}゜`}</CityTemperature>
-      <ConditionImage weather={weather} />
+      <ConditionImage />
     </CityList>
   );
 }
