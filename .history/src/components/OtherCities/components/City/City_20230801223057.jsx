@@ -21,12 +21,15 @@ const CityTemperature = styled(Typography)`
 `;
 
 function City({ name, temperature, weather, onClicked, clicked }) {
+  if (clicked) {
+    return null;
+  }
 
   return (
     <CityList
       onClick={(event) => {
         event.preventDefault();
-        onClicked();
+        onClicked(true);
       }}
     >
       <CityName variant="h6">{name}</CityName>

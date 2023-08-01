@@ -21,6 +21,9 @@ const CityTemperature = styled(Typography)`
 `;
 
 function City({ name, temperature, weather, onClicked, clicked }) {
+  if (clicked) {
+    return null;
+  }
 
   return (
     <CityList
