@@ -24,7 +24,7 @@ const ShowCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
   width: 850px;
- 
+  height: 680px;
   background-color: white;
   border-radius: 45px;
   box-shadow: 0 0 16px rgb(0 0 0 / 50%);
