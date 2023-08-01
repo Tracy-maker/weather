@@ -16,7 +16,6 @@ const BackgroundCard = styled(Container)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top:30px;
 `;
 
 const ShowCard = styled(Box)`
@@ -27,7 +26,7 @@ const ShowCard = styled(Box)`
   border-radius: 45px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
- 
+  margin-top:auto;
 `;
 const CardBottom = styled(Box)`
   display: flex;
