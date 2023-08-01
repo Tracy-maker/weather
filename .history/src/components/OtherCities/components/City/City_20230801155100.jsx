@@ -14,7 +14,7 @@ const CityName = styled(Typography)`
 
 const CityTemperature = styled(Typography)`
   width: 70px;
-  text-align: right;
+  margin-right:1rem;
   color: #696969;
 `;
 

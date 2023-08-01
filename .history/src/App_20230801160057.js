@@ -3,7 +3,8 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Container,Box} from "@mui/material";
+import Card from "@mui/material/Card";
+import { CardActionArea, Container,Box } from "@mui/material";
 import p1 from "./assets/background1.jpg";
 
 const BackgroundCard = styled(Container)`
@@ -24,7 +25,7 @@ const ShowCard = styled(Box)`
   width: 850px;
   background-color: white;
   border-radius: 45px;
-  box-shadow: 0 0 16px rgb(0 0 0 / 90%);
+  box-shadow: 0 0 16px rgb(0 0 0 / 50%) ;
 `;
 const CardBottom = styled(Box)`
   display: flex;

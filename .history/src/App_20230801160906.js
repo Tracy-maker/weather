@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
+import Card from "@mui/material/Card";
 import { CardActionArea, Container,Box} from "@mui/material";
 import p1 from "./assets/background1.jpg";
 
