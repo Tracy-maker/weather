@@ -38,7 +38,7 @@ const Cities = [
 ];
 
 function OtherCities() {
-  const [currentCity, setCurrentCity] = useState(3);
+  const [currentCity, setCurrentCity] = useState();
 
   return (
     <OtherCitiesContainer spacing={1}>
