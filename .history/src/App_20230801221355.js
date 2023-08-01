@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Container,Box,Divider} from "@mui/material";
+import { CardActionArea, Container,Box} from "@mui/material";
 import p1 from "./assets/background1.jpg";
 
 const BackgroundCard = styled(Container)`
@@ -34,7 +34,7 @@ const CardBottom = styled(Box)`
 `;
 
 const DividerLine = styled(Divider)`
-  width: 5px;
+  width: 2px;
   background: rgba(225, 225, 225, 0.7);
 `;
 
@@ -46,7 +46,7 @@ function App() {
           <City />
           <CardBottom>
             <OtherCities />
-            <DividerLine/>
+            <DividerLine
             <Forecast />
           </CardBottom>
         </CardActionArea>

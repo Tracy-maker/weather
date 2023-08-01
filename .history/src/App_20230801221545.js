@@ -36,6 +36,7 @@ const CardBottom = styled(Box)`
 const DividerLine = styled(Divider)`
   width: 5px;
   background: rgba(225, 225, 225, 0.7);
+  height:130px
 `;
 
 function App() {
