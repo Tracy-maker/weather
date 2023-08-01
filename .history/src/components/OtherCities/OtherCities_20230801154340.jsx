@@ -7,12 +7,13 @@ const OtherCitiesContainer = styled(Stack)`
 `;
 const Title = styled(Typography)`
   text-align: center;
+  letter-spacing: 10px;;
 `;
 
 function OtherCities() {
   return (
     <OtherCitiesContainer spacing={1}>
-      <Title variant="h6">OTHER CITIES</Title>
+      <Title variant="h6">Other Cities</Title>
       <City />
       <City />
       <City />

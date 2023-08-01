@@ -12,7 +12,7 @@ const Title = styled(Typography)`
 function OtherCities() {
   return (
     <OtherCitiesContainer spacing={1}>
-      <Title variant="h6">OTHER CITIES</Title>
+      <Title variant="h6" component="h1">Other Cities</Title>
       <City />
       <City />
       <City />

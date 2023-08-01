@@ -13,7 +13,6 @@ const CityName = styled(Typography)`
 `;
 
 const CityTemperature = styled(Typography)`
-  width: 70px;
   color: #696969;
 `;
 
@@ -21,7 +20,7 @@ function City() {
   return (
     <CityList>
       <CityName variant="h6">Sydney</CityName>
-      <CityTemperature variant="h6">17゜</CityTemperature>
+      <CityTemperature>17゜</CityTemperature>
       <ConditionImage />
     </CityList>
   );

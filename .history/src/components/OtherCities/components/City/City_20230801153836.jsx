@@ -21,7 +21,7 @@ function City() {
   return (
     <CityList>
       <CityName variant="h6">Sydney</CityName>
-      <CityTemperature variant="h6">17゜</CityTemperature>
+      <CityTemperature>17゜</CityTemperature>
       <ConditionImage />
     </CityList>
   );

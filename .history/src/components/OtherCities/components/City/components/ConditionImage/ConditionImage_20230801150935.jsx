@@ -8,7 +8,7 @@ const Image = styled.img`
 function ConditionImage() {
   return (
     <Image
-      src="http://openweathermap.org/img/wn/04n.png"
+      scr="http://openweathermap.org/img/wn/04n.png"
       alt="Rain"
     />
   );

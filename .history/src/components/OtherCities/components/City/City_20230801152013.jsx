@@ -4,24 +4,20 @@ import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Button)`
   display: flex;
+  text-align: center;
   cursor: pointer;
+  justify-content: space-around;
 `;
 
 const CityName = styled(Typography)`
   width: 120px;
-  color: #696969;
-`;
-
-const CityTemperature = styled(Typography)`
-  width: 70px;
-  color: #696969;
 `;
 
 function City() {
   return (
     <CityList>
       <CityName variant="h6">Sydney</CityName>
-      <CityTemperature variant="h6">17゜</CityTemperature>
+      <Typography>17゜</Typography>
       <ConditionImage />
     </CityList>
   );
