@@ -20,7 +20,8 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function City({ name, temperature, weather,onClicked }) {
+function City({ name, temperature, weather,  clickedon,Clicked }) {
+
   return (
     <CityList
       onClick={(event) => {
