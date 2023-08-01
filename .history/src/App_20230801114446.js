@@ -25,7 +25,7 @@ const ShowCard = styled(Card)`
   margin-right: auto;
   width: 850px;
   background-color: white;
-  border-radius: 45px;
+  border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 50%);
 `;
 const CardBottom = styled(CardContent)`

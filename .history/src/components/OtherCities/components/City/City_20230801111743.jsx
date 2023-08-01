@@ -7,18 +7,19 @@ const CityList = styled(Button)`
   font-size: 1.5rem;
   text-align: left;
   background: transparent;
+  border: 0;
   padding: 0;
- 
 `;
 
 const CityName = styled(Typography)`
   width: 120px;
+
 `;
 
 function City() {
   return (
-    <CityList >
-      <CityName variant="h6">Sydney</CityName>
+    <CityList variant="outlined">
+      <CityName>Sydney</CityName>
       <Typography>17゜</Typography>
       <ConditionImage />
     </CityList>

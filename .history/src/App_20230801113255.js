@@ -23,9 +23,10 @@ const BackgroundCard = styled(Container)`
 const ShowCard = styled(Card)`
   margin-left: auto;
   margin-right: auto;
-  width: 850px;
+  width: 900px;
+  height: 650px;
   background-color: white;
-  border-radius: 45px;
+  border-radius: 32px;
   box-shadow: 0 0 16px rgb(0 0 0 / 50%);
 `;
 const CardBottom = styled(CardContent)`

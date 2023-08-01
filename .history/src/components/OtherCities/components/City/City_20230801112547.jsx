@@ -8,7 +8,6 @@ const CityList = styled(Button)`
   text-align: left;
   background: transparent;
   padding: 0;
- 
 `;
 
 const CityName = styled(Typography)`
@@ -17,9 +16,9 @@ const CityName = styled(Typography)`
 
 function City() {
   return (
-    <CityList >
-      <CityName variant="h6">Sydney</CityName>
-      <Typography>17゜</Typography>
+    <CityList variant="text">
+      <CityName >Sydney</CityName>
+      <Typography>17</Typography>
       <ConditionImage />
     </CityList>
   );

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Stack,Typography } from "@mui/material";
+import { Box,Stack,Typography } from "@mui/material";
 import City from "./components/City/City";
 
 const OtherCitiesContainer = styled(Stack)`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Stack,Typography } from "@mui/material";
+import { Box,Stack,Typography } from "@mui/material";
 import City from "./components/City/City";
 
 const OtherCitiesContainer = styled(Stack)`
@@ -8,7 +8,7 @@ const OtherCitiesContainer = styled(Stack)`
 
 function OtherCities() {
   return (
-    <OtherCitiesContainer spacing={2}>
+    <OtherCitiesContainer>
       <Typography variant="h6" >Other Cities</Typography>
       <City/>
       <City/>

@@ -13,6 +13,7 @@ const CityList = styled(Button)`
 
 const CityName = styled(Typography)`
   width: 120px;
+  text-transform:lowercase !important;
 `;
 
 function City() {

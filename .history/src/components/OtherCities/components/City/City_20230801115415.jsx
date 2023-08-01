@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
 
-const CityList = styled(Button)`
+const CityList = styled(Item)`
   display: flex;
   font-size: 1.5rem;
   text-align: left;

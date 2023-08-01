@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { Button, Typography } from "@mui/material";
+import { Button, Typography} from "@mui/material";
+import Name from "./components/Name/Name";
+import Temperature from "./components/Temperature/Temperature";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Button)`
@@ -7,19 +9,15 @@ const CityList = styled(Button)`
   font-size: 1.5rem;
   text-align: left;
   background: transparent;
+  border: 0;
   padding: 0;
- 
-`;
-
-const CityName = styled(Typography)`
-  width: 120px;
 `;
 
 function City() {
   return (
-    <CityList >
-      <CityName variant="h6">Sydney</CityName>
-      <Typography>17゜</Typography>
+    <CityList>
+      <Typography></Typography>
+      <Typography></Typography>
       <ConditionImage />
     </CityList>
   );

@@ -18,7 +18,7 @@ const CityName = styled(Typography)`
 function City() {
   return (
     <CityList >
-      <CityName variant="h6">Sydney</CityName>
+      <CityName variant="h7">Sydney</CityName>
       <Typography>17゜</Typography>
       <ConditionImage />
     </CityList>
