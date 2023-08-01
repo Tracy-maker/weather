@@ -10,8 +10,6 @@ const CityList = styled(Button)`
 const CityName = styled(Typography)`
   width: 120px;
   color: #696969;
-  text-align: left ;
-
 `;
 
 const CityTemperature = styled(Typography)`

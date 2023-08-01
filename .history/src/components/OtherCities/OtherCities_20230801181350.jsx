@@ -10,7 +10,7 @@ const Title = styled(Typography)`
 `;
 
 const Cities=[
-  {id:0,name:'Sydney',temperature:'17'},
+  {id:0,name:'Sydeny',temperature:'17'},
   {id:1,name:'Brisbane',temperature:'20'},
   {id:2,name:'Perth',temperature:'20'}
 ]

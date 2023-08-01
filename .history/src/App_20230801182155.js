@@ -25,7 +25,6 @@ const ShowCard = styled(Box)`
   background-color: white;
   border-radius: 45px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
-  overflow: hidden;
 `;
 const CardBottom = styled(Box)`
   display: flex;

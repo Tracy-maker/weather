@@ -12,8 +12,7 @@ const CardContentTop = styled(Box)`
   align-items: flex-start;
   padding: 64px 96px;
   background-image: url(${p2});
-  background-size: cover;
-  over-flow:hidden;
+  background-size: fit;
   color: white;
   position: relative;
 `;
