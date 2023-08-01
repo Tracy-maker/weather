@@ -41,15 +41,13 @@ function OtherCities() {
         if (currentCity === id) {
           return null;
         }
-        return (
-          <City
-            key={id}
-            name={name}
-            temperature={temperature}
-            weather={weather}
-            onClicked={()=>setCurrentCity(id)}
-          />
-        );
+        return(
+        <City
+          key={id}
+          name={name}
+          temperature={temperature}
+          weather={weather}
+        />);
       })}
     </OtherCitiesContainer>
   );

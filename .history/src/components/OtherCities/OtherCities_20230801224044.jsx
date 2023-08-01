@@ -47,7 +47,6 @@ function OtherCities() {
             name={name}
             temperature={temperature}
             weather={weather}
-            onClicked={()=>setCurrentCity(id)}
           />
         );
       })}
