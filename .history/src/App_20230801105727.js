@@ -31,6 +31,7 @@ const ShowCard = styled(Card)`
 `;
 const CardBottom = styled(CardContent)`
   display: flex;
+  padding-left:0;
 `;
 
 function App() {
