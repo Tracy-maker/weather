@@ -12,7 +12,6 @@ const CityName = styled(Typography)`
   color: #696969;
   text-align: left;
   margin-right: 0.5rem;
-  font-size:29px;
 `;
 
 const CityTemperature = styled(Typography)`
@@ -29,8 +28,8 @@ function City({ name, temperature, weather,onClicked }) {
         onClicked();
       }}
     >
-      <CityName variant="subtitle1">{name}</CityName>
-      <CityTemperature variant="body1" >{`${temperature}゜`}</CityTemperature>
+      <CityName variant="h7">{name}</CityName>
+      <CityTemperature variant="h7">{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>
   );

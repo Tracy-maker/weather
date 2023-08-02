@@ -29,7 +29,7 @@ function City({ name, temperature, weather,onClicked }) {
         onClicked();
       }}
     >
-      <CityName variant="subtitle1">{name}</CityName>
+      <CityName >{name}</CityName>
       <CityTemperature variant="body1" >{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>

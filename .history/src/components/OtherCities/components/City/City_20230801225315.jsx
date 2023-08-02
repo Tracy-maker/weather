@@ -29,8 +29,8 @@ function City({ name, temperature, weather,onClicked }) {
         onClicked();
       }}
     >
-      <CityName variant="subtitle1">{name}</CityName>
-      <CityTemperature variant="body1" >{`${temperature}゜`}</CityTemperature>
+      <CityName variant="h7">{name}</CityName>
+      <CityTemperature variant="caption" >{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>
   );
