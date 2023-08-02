@@ -23,6 +23,7 @@ const CityTemperature = styled(Typography)`
 
 function City({ name, temperature, weather, onClicked }) {
   return (
+    <>
     <CityList
       onClick={(event) => {
         event.preventDefault();
@@ -33,7 +34,7 @@ function City({ name, temperature, weather, onClicked }) {
       <CityTemperature variant="body1">{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>
-  
+    </>
   );
 }
 export default City;

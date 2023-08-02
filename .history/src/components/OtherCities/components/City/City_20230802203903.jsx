@@ -33,7 +33,6 @@ function City({ name, temperature, weather, onClicked }) {
       <CityTemperature variant="body1">{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>
-  
   );
 }
 export default City;

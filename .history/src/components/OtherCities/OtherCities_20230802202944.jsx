@@ -44,7 +44,7 @@ function OtherCities({ currentCityId, onCityClick }) {
         if (currentCityId === id) {
           return null;
         }
-        return (
+       
           <City
             key={id}
             name={name}
@@ -52,7 +52,7 @@ function OtherCities({ currentCityId, onCityClick }) {
             weather={weather}
             onClicked={() => onCityClick(id)}
           />
-        );
+       
       })}
     </OtherCitiesContainer>
   );

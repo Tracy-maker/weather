@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Stack, Typography } from "@mui/material";
 import City from "./components/City/City";
+import { useState } from "react";
 
 const OtherCitiesContainer = styled(Stack)`
   padding: 23px 20px;
@@ -37,6 +38,8 @@ const Cities = [
 ];
 
 function OtherCities({ currentCityId, onCityClick }) {
+  const [currentCity, setCurrentCity] = useState(2158177);
+
   return (
     <OtherCitiesContainer spacing={1}>
       <Title variant="h6">OTHER CITIES</Title>
@@ -50,7 +53,9 @@ function OtherCities({ currentCityId, onCityClick }) {
             name={name}
             temperature={temperature}
             weather={weather}
-            onClicked={() => onCityClick(id)}
+            onClicked={() => {
+              onCityClick(id);
+            }}
           />
         );
       })}
