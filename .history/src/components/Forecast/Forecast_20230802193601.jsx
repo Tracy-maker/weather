@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Box, Typography } from "@mui/material";
-import Weeks from "./components/Weeks/Weeks";
-import ConditionImage from "../OtherCities/components/City/components/ConditionImage/ConditionImage";
+import Weeks from "./components/Weeks";
 
-const ForeCastContainer = styled(Box)``;
+const ForeCastContainer = styled(Box)`
+
+`;
 const Title = styled(Typography)`
   text-align: center;
 `;
@@ -14,14 +15,19 @@ const FutureTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function Forecast() {
+function Forecast () {
+ 
+
   return (
     <ForeCastContainer>
       <Title variant="h6">ForeCast</Title>
-      <Weeks />
-      <FutureTemperature variant="body1">19゜</FutureTemperature>
+   <Weeks/>
+   <FutureTemperature variant="body1" >19゜</FutureTemperature>
     </ForeCastContainer>
   );
 }
+
+
+
 
 export default Forecast;

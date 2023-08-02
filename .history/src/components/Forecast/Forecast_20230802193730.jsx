@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Box, Typography } from "@mui/material";
-import Weeks from "./components/Weeks/Weeks";
+import Weeks from "./components/Weeks";
 import ConditionImage from "../OtherCities/components/City/components/ConditionImage/ConditionImage";
 
 const ForeCastContainer = styled(Box)``;
@@ -19,6 +19,7 @@ function Forecast() {
     <ForeCastContainer>
       <Title variant="h6">ForeCast</Title>
       <Weeks />
+      <ConditionImage/>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
     </ForeCastContainer>
   );
