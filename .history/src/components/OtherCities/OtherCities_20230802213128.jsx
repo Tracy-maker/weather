@@ -3,7 +3,7 @@ import { Stack, Typography } from "@mui/material";
 import City from "./components/City/City";
 
 const OtherCitiesContainer = styled(Stack)`
-  padding: 23px 30px;
+  padding: 23px 25px;
 `;
 const Title = styled(Typography)`
   text-align: center;

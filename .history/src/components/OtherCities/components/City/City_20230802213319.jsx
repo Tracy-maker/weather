@@ -23,6 +23,9 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
+const Icon=styled(ConditionImage)`
+text-align: right;
+`
 
 function City({ name, temperature, weather, onClicked }) {
   return (

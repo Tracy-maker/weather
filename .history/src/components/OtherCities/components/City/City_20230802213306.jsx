@@ -23,6 +23,9 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
+const Icon=styled(ConditionImage)`
+text-align: right;
+`
 
 function City({ name, temperature, weather, onClicked }) {
   return (
@@ -34,7 +37,7 @@ function City({ name, temperature, weather, onClicked }) {
     >
       <CityName variant="subtitle1">{name}</CityName>
       <CityTemperature variant="body1">{`${temperature}゜`}</CityTemperature>
-      <ConditionImage weather={weather} />
+      <Icon weather={weather} />
     </CityList>
   
   );

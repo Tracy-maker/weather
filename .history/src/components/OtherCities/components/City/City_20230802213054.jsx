@@ -23,7 +23,6 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-
 function City({ name, temperature, weather, onClicked }) {
   return (
     <CityList
