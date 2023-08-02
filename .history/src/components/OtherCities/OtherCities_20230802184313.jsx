@@ -4,7 +4,7 @@ import City from "./components/City/City";
 import { useState } from "react";
 
 const OtherCitiesContainer = styled(Stack)`
-  padding: 23px 20px;
+  padding:23px 20px;
 `;
 const Title = styled(Typography)`
   text-align: center;
@@ -37,7 +37,7 @@ const Cities = [
   },
 ];
 
-function OtherCities({ onCityClick }) {
+function OtherCities({onCityClick}) {
   const [currentCity, setCurrentCity] = useState(2158177);
 
   return (
@@ -53,10 +53,8 @@ function OtherCities({ onCityClick }) {
             name={name}
             temperature={temperature}
             weather={weather}
-            onClicked={() => {
-              setCurrentCity(id);
-              onCityClick(id);
-            }}
+            onClicked={()=>setCurrentCity(id)
+                          onCityClick(id);}
           />
         );
       })}
