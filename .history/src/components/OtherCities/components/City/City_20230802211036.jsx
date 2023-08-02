@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
 
-const CityList = styled(Box)`
+const CityList = styled(Button)`
   display: flex;
-  justify-content: center; 
-  align-items: center; 
   cursor: pointer;
 `;
 

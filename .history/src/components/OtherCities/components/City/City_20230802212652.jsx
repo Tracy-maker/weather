@@ -4,8 +4,6 @@ import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Box)`
   display: flex;
-  justify-content: center; 
-  align-items: center; 
   cursor: pointer;
 `;
 

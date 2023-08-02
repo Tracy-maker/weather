@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import { Box, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
 
-const CityList = styled(Box)`
+const CityList = styled(Button)`
   display: flex;
-  justify-content: center; 
-  align-items: center; 
   cursor: pointer;
 `;
 
@@ -25,6 +23,7 @@ const CityTemperature = styled(Typography)`
 
 function City({ name, temperature, weather, onClicked }) {
   return (
+    <Box>
     <CityList
       onClick={(event) => {
         event.preventDefault();
@@ -35,6 +34,7 @@ function City({ name, temperature, weather, onClicked }) {
       <CityTemperature variant="body1">{`${temperature}゜`}</CityTemperature>
       <ConditionImage weather={weather} />
     </CityList>
+    </Box>
   
   );
 }
