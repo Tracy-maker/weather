@@ -1,4 +1,4 @@
-function getWeather(cityId) {
+function getWeather(cityId, onError) {
   const appId = "1bf06f9e357bb376f67992e64e38314c";
 
   return fetch(

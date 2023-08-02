@@ -29,7 +29,7 @@ function City({id}) {
   const [data, setData] = useState();
  
   useEffect(() => {
-    getWeather(id).then(setData).catch((response)=>console.log(response));
+    getWeather(id).then(setData);
   }, [id]);
   return (
     <CardContentTop>
