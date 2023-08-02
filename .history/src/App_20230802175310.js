@@ -5,7 +5,6 @@ import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
 import { CardActionArea, Container,Box,Divider} from "@mui/material";
 import p1 from "./assets/background1.jpg";
-import { useState } from "react";
 
 const BackgroundCard = styled(Container)`
   height: 100vh;
@@ -40,15 +39,13 @@ const DividerLine = styled(Divider)`
 `;
 
 function App() {
-  const[cityId, setCityId]=useState(2158177);
-
   return (
     <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
-          <City id={cityId}/>
+          <City />
           <CardBottom>
-            <OtherCities onCityClick={(id)=>setCityId(id)}/>
+            <OtherCities setCityId={setCityId}/>
             <DividerLine/>
             <Forecast />
           </CardBottom>

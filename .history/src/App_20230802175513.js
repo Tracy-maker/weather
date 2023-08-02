@@ -46,9 +46,9 @@ function App() {
     <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
-          <City id={cityId}/>
+          <City cityId={cityId}/>
           <CardBottom>
-            <OtherCities onCityClick={(id)=>setCityId(id)}/>
+            <OtherCities setCityId={setCityId}/>
             <DividerLine/>
             <Forecast />
           </CardBottom>

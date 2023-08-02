@@ -37,8 +37,8 @@ const Cities = [
   },
 ];
 
-function OtherCities({onCityClick}) {
-  const [currentCity, setCurrentCity] = useState(2158177);
+function OtherCities() {
+  const [currentCity, setCurrentCity] = useState(3);
 
   return (
     <OtherCitiesContainer spacing={1}>
@@ -53,8 +53,7 @@ function OtherCities({onCityClick}) {
             name={name}
             temperature={temperature}
             weather={weather}
-            onClicked={()=>setCurrentCity(id);
-                          setCityId(id)}
+            onClicked={()=>setCurrentCity(id)}
           />
         );
       })}

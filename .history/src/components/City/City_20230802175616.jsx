@@ -30,7 +30,7 @@ function City({id}) {
  
   useEffect(() => {
     getWeather(id,setData);
-  }, [id]);
+  }, []);
   return (
     <CardContentTop>
       {data && (

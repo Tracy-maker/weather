@@ -29,8 +29,8 @@ function City({id}) {
   const [data, setData] = useState();
  
   useEffect(() => {
-    getWeather(id,setData);
-  }, [id]);
+    getWeather(setData);
+  }, []);
   return (
     <CardContentTop>
       {data && (

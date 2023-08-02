@@ -48,7 +48,7 @@ function App() {
         <CardActionArea>
           <City id={cityId}/>
           <CardBottom>
-            <OtherCities onCityClick={(id)=>setCityId(id)}/>
+            <OtherCities onCityClick={setCityId}/>
             <DividerLine/>
             <Forecast />
           </CardBottom>

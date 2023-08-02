@@ -37,7 +37,7 @@ const Cities = [
   },
 ];
 
-function OtherCities({onCityClick}) {
+function OtherCities(onCityClick) {
   const [currentCity, setCurrentCity] = useState(2158177);
 
   return (
@@ -53,7 +53,7 @@ function OtherCities({onCityClick}) {
             name={name}
             temperature={temperature}
             weather={weather}
-            onClicked={()=>setCurrentCity(id);
+            onClicked={()=>setCurrentCity(id)
                           setCityId(id)}
           />
         );

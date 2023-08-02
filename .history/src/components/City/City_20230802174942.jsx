@@ -25,12 +25,12 @@ const Strip = styled(Box)`
   left: 0;
   right: 0;
 `;
-function City({id}) {
+function City() {
   const [data, setData] = useState();
- 
+  const[cityId, setCityId]=useState();
   useEffect(() => {
-    getWeather(id,setData);
-  }, [id]);
+    getWeather(setData);
+  }, []);
   return (
     <CardContentTop>
       {data && (
