@@ -26,6 +26,10 @@ function OtherCities({ currentCityId, onCityClick }) {
     });
   }, []);
 
+  if (!data) {
+    return null;
+  }
+
   return (
     <OtherCitiesContainer spacing={1}>
       <Title variant="h6">OTHER CITIES</Title>

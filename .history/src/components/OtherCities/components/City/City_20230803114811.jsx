@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Paper, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
-
+import { useEffect, useState } from "react";
 
 
 const CityList = styled(Paper)`

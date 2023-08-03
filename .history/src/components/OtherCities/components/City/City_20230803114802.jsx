@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Paper, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
-
+import { useEffect, useState } from "react";
 
 
 const CityList = styled(Paper)`
@@ -37,7 +37,7 @@ function City({ name,temperature,weather,onClicked }) {
     >
       <CityName variant="subtitle1">{name}</CityName>
       <CityTemperature variant="body1">{`${parseFloat(temperature).toFixed(0)}゜`}</CityTemperature>
-      <ConditionImage  weather={weather} />
+      <ConditionImage cityId={id} weather={weather} />
     </CityList>
   );
 }

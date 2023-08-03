@@ -14,7 +14,7 @@ const Title = styled(Typography)`
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
 function OtherCities({ currentCityId, onCityClick }) {
-  const [data, setData] = useState({});
+  const [data, setData] = useState();
   useEffect(() => {
     CITY_IDS.forEach((id) => {
       getWeather(id).then((data) => {
@@ -26,25 +26,19 @@ function OtherCities({ currentCityId, onCityClick }) {
     });
   }, []);
 
+  if (!data) {
+    return null;
+  }
+
   return (
     <OtherCitiesContainer spacing={1}>
       <Title variant="h6">OTHER CITIES</Title>
-      {Object.values(data).map(
-        ({ id, name, weather: [weather], main: { temp: temperature } }) => {
-          if (currentCityId === id) {
-            return null;
-          }
-          return (
-            <City
-              key={id}
-              name={name}
-              weather={weather}
-              temperature={temperature}
-              onClicked={() => onCityClick(id)}
-            />
-          );
+      {CITY_IDS.map(({ id, name, temperature, weather }) => {
+        if (currentCityId === id) {
+          return null;
         }
-      )}
+        return <City key={id} onClicked={() => onCityClick(id)} />;
+      })}
     </OtherCitiesContainer>
   );
 }

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Paper, Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
-
-
+import { useEffect, useState } from "react";
+import getWeather from "../../../../utils/getWeather/getWeather";
 
 const CityList = styled(Paper)`
   display: flex;
@@ -25,7 +25,7 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function City({ name,temperature,weather,onClicked }) {
+function City({ id, onClicked }) {
 
   return (
     <CityList
@@ -35,9 +35,9 @@ function City({ name,temperature,weather,onClicked }) {
         onClicked();
       }}
     >
-      <CityName variant="subtitle1">{name}</CityName>
-      <CityTemperature variant="body1">{`${parseFloat(temperature).toFixed(0)}゜`}</CityTemperature>
-      <ConditionImage  weather={weather} />
+      <CityName variant="subtitle1">{data.name}</CityName>
+      <CityTemperature variant="body1">{`${parseFloat(data.main.temp).toFixed(0)}゜`}</CityTemperature>
+      <ConditionImage cityId={id} weather={data.weather[0]} />
     </CityList>
   );
 }
