@@ -6,10 +6,7 @@ async function getWeather(cityId) {
       `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`
     );
 
-    if (!response.ok) {
-      throw response;
-    }
-    return await response.json();
+   
   } catch (error) {
     console.error("Error fetching weather data:", error);
     throw error;
