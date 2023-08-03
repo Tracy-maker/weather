@@ -41,10 +41,8 @@ const DividerLine = styled(Divider)`
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
 function App() {
- 
   const [cityId, setCityId] = useState(2158177);
   const [data, setData] = useState({});
-  
   useEffect(() => {
     CITY_IDS.forEach((id) => {
       getWeather(id).then((data) => {

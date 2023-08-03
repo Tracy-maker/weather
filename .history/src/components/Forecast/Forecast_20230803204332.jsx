@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { Stack, Typography } from "@mui/material";
+import {Stack, Typography } from "@mui/material";
 import Weeks from "./components/Weeks/Weeks";
 
 const ForeCastContainer = styled(Stack)`
-  padding: 28px 35px;
+  text-align: center;
 `;
 const Title = styled(Typography)`
   text-align: center;
