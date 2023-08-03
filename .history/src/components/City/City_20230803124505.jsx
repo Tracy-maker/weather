@@ -37,7 +37,7 @@ function City({ id,weather}) {
             humidity={weather.main.humidity}
             wind={weather.wind.speed}
           />
-          <Name name={weather.name} />
+          <Name name={data.name} />
         </>
       )}
       <Strip />

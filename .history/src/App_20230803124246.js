@@ -59,11 +59,11 @@ function App() {
     <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
-          <City weather={data[cityId]} id={cityId} />
+          <City id={cityId} />
           <CardBottom>
             <OtherCities
               currentCityId={cityId}
-              weathers={Object.values(data)}
+              weathers={data}
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />

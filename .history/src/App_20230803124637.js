@@ -63,7 +63,7 @@ function App() {
           <CardBottom>
             <OtherCities
               currentCityId={cityId}
-              weathers={Object.values(data)}
+              weathers={data}
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />

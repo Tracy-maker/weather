@@ -13,11 +13,13 @@ const Title = styled(Typography)`
 
 
 
-function OtherCities({ currentCityId, onCityClick ,weathers}) {
+function OtherCities({ currentCityId, onCityClick ,cities}) {
+ 
+
   return (
     <OtherCitiesContainer spacing={1}>
       <Title variant="h6">OTHER CITIES</Title>
-      {weathers.map(
+      {cities.map(
         ({ id, name, weather: [weather], main: { temp: temperature } }) => {
           if (currentCityId === id) {
             return null;

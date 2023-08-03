@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Container, Box, Divider } from "@mui/material";
+import { CardActionArea, Container,Box,Divider} from "@mui/material";
 import p1 from "./assets/background1.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -19,7 +19,7 @@ const BackgroundCard = styled(Container)`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding-top: 30px;
+  padding-top:30px;
 `;
 
 const ShowCard = styled(Box)`
@@ -30,6 +30,7 @@ const ShowCard = styled(Box)`
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
+ 
 `;
 const CardBottom = styled(Box)`
   display: flex;
@@ -42,7 +43,7 @@ const DividerLine = styled(Divider)`
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
 function App() {
-  const [cityId, setCityId] = useState(2158177);
+  const[cityId, setCityId]=useState(2158177);
   const [data, setData] = useState({});
   useEffect(() => {
     CITY_IDS.forEach((id) => {
@@ -59,14 +60,10 @@ function App() {
     <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
-          <City weather={data[cityId]} id={cityId} />
+          <City id={cityId}/>
           <CardBottom>
-            <OtherCities
-              currentCityId={cityId}
-              weathers={Object.values(data)}
-              onCityClick={(id) => setCityId(id)}
-            />
-            <DividerLine />
+            <OtherCities currentCityId={cityId} onCityClick={(id)=>setCityId(id)}/>
+            <DividerLine/>
             <Forecast />
           </CardBottom>
         </CardActionArea>
