@@ -16,7 +16,7 @@ const BackgroundCard = styled(Stack)`
   align-items: stretch;
   justify-content: center;
   background-image: url(${p1});
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 `;

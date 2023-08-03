@@ -9,14 +9,14 @@ import { useState } from "react";
 import { useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 
-const BackgroundCard = styled(Stack)`
+const BackgroundCard = styled(Box)`
   height: 100vh;
   width: 100%;
   display: flex;
   align-items: stretch;
   justify-content: center;
   background-image: url(${p1});
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
 `;
