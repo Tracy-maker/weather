@@ -15,5 +15,3 @@ async function getWeather(cityId) {
     throw error;
   }
 }
-
-export default getWeather;
