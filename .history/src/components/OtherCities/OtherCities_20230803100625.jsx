@@ -46,8 +46,8 @@ function OtherCities({ currentCityId, onCityClick }) {
         }
         return (
           <City
-            key={id}
             id={id}
+            key={id}
             name={name}
             temperature={temperature}
             weather={weather}

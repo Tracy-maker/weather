@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Paper,Typography } from "@mui/material";
+import { Box, Paper, Stack, Card,Typography } from "@mui/material";
 import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Paper)`
