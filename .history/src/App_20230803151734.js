@@ -55,7 +55,7 @@ function App() {
   }, []);
 
   return (
-    <BackgroundCard>
+    <BackgroundCard >
       <ShowCard>
         <CardActionArea>
           <City weather={data[cityId]}/>

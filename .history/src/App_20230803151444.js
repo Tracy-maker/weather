@@ -3,13 +3,13 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Container, Box, Divider, Stack } from "@mui/material";
+import { CardActionArea, Container, Box, Divider } from "@mui/material";
 import p1 from "./assets/background1.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 
-const BackgroundCard = styled(Stack)`
+const BackgroundCard = styled(Box)`
   height: 100vh;
   width: 100%;
   display: flex;
@@ -19,6 +19,7 @@ const BackgroundCard = styled(Stack)`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  padding-top: 30px;
 `;
 
 const ShowCard = styled(Box)`
@@ -55,7 +56,7 @@ function App() {
   }, []);
 
   return (
-    <BackgroundCard>
+    <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
           <City weather={data[cityId]}/>

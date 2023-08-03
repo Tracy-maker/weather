@@ -19,6 +19,7 @@ const BackgroundCard = styled(Stack)`
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
+  
 `;
 
 const ShowCard = styled(Box)`
@@ -55,7 +56,7 @@ function App() {
   }, []);
 
   return (
-    <BackgroundCard>
+    <BackgroundCard maxWidth="xl">
       <ShowCard>
         <CardActionArea>
           <City weather={data[cityId]}/>
