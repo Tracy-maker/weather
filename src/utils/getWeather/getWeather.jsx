@@ -1,19 +1,10 @@
-async function getWeather(cityId) {
-  const appId = "1bf06f9e357bb376f67992e64e38314c";
+import { APP_ID, OPEN_WEATHER_MAP_BASE_URL } from "../../config";
+import onResponse from "../onResponse/onResponse";
 
-  try {
-    const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?id=${cityId}&units=metric&appid=${appId}`
-    );
-
-    if (!response.ok) {
-      throw response;
-    }
-    return await response.json();
-  } catch (error) {
-    console.error("Error fetching weather data:", error);
-    throw error;
-  }
+function getWeather(cityId) {
+  fetch(
+    `${OPEN_WEATHER_MAP_BASE_URL}/weather?id=${cityId}&units=metric&appid=${APP_ID}`
+  ).then(onResponse);
 }
 
 export default getWeather;
