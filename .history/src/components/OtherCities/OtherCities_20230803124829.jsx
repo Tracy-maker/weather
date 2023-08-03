@@ -9,6 +9,8 @@ const Title = styled(Typography)`
   text-align: center;
 `;
 
+
+
 function OtherCities({ currentCityId, onCityClick ,weathers}) {
   return (
     <OtherCitiesContainer spacing={1}>

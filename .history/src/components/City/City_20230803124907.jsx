@@ -23,7 +23,7 @@ const Strip = styled(Box)`
   left: 0;
   right: 0;
 `;
-function City({weather}) {
+function City({ id,weather}) {
  
   return (
     <CardContentTop>
