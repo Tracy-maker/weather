@@ -25,14 +25,14 @@ const CityTemperature = styled(Typography)`
   color: #696969;
 `;
 
-function City({ id, onClicked }) {
+function City({ id, name, temperature, weather, onClicked }) {
   const [data, setData] = useState();
   useEffect(() => {
     getWeather(id).then(setData);
   }, [id]);
 
-  if (!data) {
-    return null;
+  if(!data){
+    return null
   }
 
   return (
@@ -43,9 +43,9 @@ function City({ id, onClicked }) {
         onClicked();
       }}
     >
-      <CityName variant="subtitle1">{data.name}</CityName>
-      <CityTemperature variant="body1">{`${parseFloat(data.main.temp).toFixed(0)}゜`}</CityTemperature>
-      <ConditionImage cityId={id} weather={data.weather[0]} />
+      <CityName variant="subtitle1">{name}</CityName>
+      <CityTemperature variant="body1">{`${temperature}゜`}</CityTemperature>
+      <ConditionImage cityId={id} weather={weather} />
     </CityList>
   );
 }

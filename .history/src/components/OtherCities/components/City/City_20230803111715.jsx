@@ -44,7 +44,7 @@ function City({ id, onClicked }) {
       }}
     >
       <CityName variant="subtitle1">{data.name}</CityName>
-      <CityTemperature variant="body1">{`${parseFloat(data.main.temp).toFixed(0)}゜`}</CityTemperature>
+      <CityTemperature variant="body1">{`${parseFloat(data.main.temp,0)}゜`}</CityTemperature>
       <ConditionImage cityId={id} weather={data.weather[0]} />
     </CityList>
   );

@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import getWeather from "../../../../../../utils/getWeather/getWeather";
 
 const Image = styled.img`
   width: 50px;
