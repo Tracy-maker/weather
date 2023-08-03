@@ -1,4 +1,4 @@
-async function getWeather(cityId) {
+iasync function getWeather(cityId) {
   const appId = "1bf06f9e357bb376f67992e64e38314c";
 
   try {
