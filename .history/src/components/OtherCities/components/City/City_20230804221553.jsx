@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Paper, Typography } from "@mui/material";
-import ConditionImage from "../ConditionImage/ConditionImage";
+import ConditionImage from "./components/ConditionImage/ConditionImage";
 
 const CityList = styled(Paper)`
   display: flex;
