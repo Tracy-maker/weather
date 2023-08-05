@@ -6,14 +6,14 @@ const ForeCastContainer = styled(Stack)`
   padding: 28px 35px;
 `;
 const Title = styled(Typography)`
-
+  text-align: center;
   padding-bottom: 10px;
 `;
 
 function Forecast() {
   return (
     <ForeCastContainer>
-      <Title variant="h6">FORECAST</Title>
+      <Title variant="h6">ForeCast</Title>
       <Weeks />
     </ForeCastContainer>
   );

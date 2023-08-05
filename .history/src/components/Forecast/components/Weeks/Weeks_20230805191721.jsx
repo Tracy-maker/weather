@@ -3,29 +3,27 @@ import styled from "styled-components";
 
 const ForeCastContainer = styled(Box)`
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
 `;
 
 const FutureTemperature = styled(Typography)`
-  display: flex;
-  width: 2.5rem;
+  width: 4rem;
+  text-align: right;
   color: #696969;
 `;
 
 function Weeks() {
   return (
     <ForeCastContainer>
-      <Typography>MON</Typography>
+      <Typography>Monday</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      <Typography>TUE</Typography>
+      <Typography>Monday</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      <Typography>WED</Typography>
+      <Typography>Monday</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      <Typography>THU</Typography>
+      <Typography>Monday</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      <Typography>FRI</Typography>
+      <Typography>Monday</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
     </ForeCastContainer>
   );

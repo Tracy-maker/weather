@@ -4,13 +4,12 @@ import styled from "styled-components";
 const ForeCastContainer = styled(Box)`
   text-align: center;
   display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 const FutureTemperature = styled(Typography)`
   display: flex;
-  width: 2.5rem;
+  
+  text-align: right;
   color: #696969;
 `;
 

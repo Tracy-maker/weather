@@ -11,6 +11,7 @@ const ForeCastContainer = styled(Box)`
 const FutureTemperature = styled(Typography)`
   display: flex;
   width: 2.5rem;
+  text-align: right;
   color: #696969;
 `;
 

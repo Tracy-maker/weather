@@ -13,7 +13,7 @@ const Title = styled(Typography)`
 function Forecast() {
   return (
     <ForeCastContainer>
-      <Title variant="h6">FORECAST</Title>
+      <Title variant="h6">ForeCast</Title>
       <Weeks />
     </ForeCastContainer>
   );
