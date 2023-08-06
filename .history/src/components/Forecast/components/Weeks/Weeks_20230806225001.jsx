@@ -16,7 +16,7 @@ const FutureTemperature = styled(Typography)`
 function Weeks() {
   return (
     <ForeCastContainer>
-      <Stack spacing={3}>
+      <Stack spacing={2}>
       <Typography>MON</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
@@ -24,15 +24,15 @@ function Weeks() {
       <Typography>TUE</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
-      <Stack spacing={2}>
+      <Stack>
       <Typography>WED</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
-      <Stack spacing={2}>
+      <Stack>
       <Typography>THU</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
-      <Stack spacing={2}>
+      <Stack>
       <Typography>FRI</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>

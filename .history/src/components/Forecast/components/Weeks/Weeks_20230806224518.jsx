@@ -10,32 +10,27 @@ const ForeCastContainer = styled(Box)`
 
 const FutureTemperature = styled(Typography)`
   display: flex;
+  width: 2.5rem;
   color: #696969;
 `;
 
 function Weeks() {
   return (
     <ForeCastContainer>
-      <Stack spacing={3}>
+      <Stack>
       <Typography>MON</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
-      <Stack spacing={2}>
+      <Stack>
       <Typography>TUE</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
       </Stack>
-      <Stack spacing={2}>
       <Typography>WED</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      </Stack>
-      <Stack spacing={2}>
       <Typography>THU</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      </Stack>
-      <Stack spacing={2}>
       <Typography>FRI</Typography>
       <FutureTemperature variant="body1">19゜</FutureTemperature>
-      </Stack>
     </ForeCastContainer>
   );
 }

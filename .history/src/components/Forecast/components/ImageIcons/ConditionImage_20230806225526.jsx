@@ -5,12 +5,12 @@ const Image = styled.img`
   height: 50px;
 `;
 
-function ImageIcon() {
+function ConditionImage() {
   return (
     <Image
       src={`http://openweathermap.org/img/wn/01n.png`}
-      alt={"rain"}
+      alt={weather.main}
     />
   );
 }
-export default ImageIcon;
+export default ConditionImage;

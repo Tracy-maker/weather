@@ -13,4 +13,4 @@ function ImageIcon() {
     />
   );
 }
-export default ImageIcon;
+export default ConditionImage;
