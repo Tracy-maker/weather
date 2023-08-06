@@ -44,8 +44,9 @@ function Weeks() {
       </DailyBox>
       <DailyBox spacing={2}>
         <Typography>FRI</Typography>
-        <ImageIcon />
+        
         <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <ImageIcon />
       </DailyBox>
     </ForeCastContainer>
   );

@@ -25,27 +25,27 @@ function Weeks() {
       <DailyBox spacing={2}>
         <Typography>MON</Typography>
         <ImageIcon />
-        <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <FutureTemperature variant="h7">19゜</FutureTemperature>
       </DailyBox>
       <DailyBox spacing={2}>
         <Typography>TUE</Typography>
         <ImageIcon />
-        <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
       <DailyBox spacing={2}>
         <Typography>WED</Typography>
         <ImageIcon />
-        <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
       <DailyBox spacing={2}>
         <Typography>THU</Typography>
         <ImageIcon />
-        <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
       <DailyBox spacing={2}>
         <Typography>FRI</Typography>
         <ImageIcon />
-        <FutureTemperature variant="body1">19゜</FutureTemperature>
+        <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
     </ForeCastContainer>
   );
