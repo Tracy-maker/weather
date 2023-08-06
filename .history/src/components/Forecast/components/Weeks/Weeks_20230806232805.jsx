@@ -12,7 +12,7 @@ const ForeCastContainer = styled(Box)`
 const FutureTemperature = styled(Typography)`
   padding-left:14px;
 `;
-const DailyBox = styled(Stack)`
+const DailyBox = styled(Card)`
   justify-content: center;
   align-items: center;
   margin-right: 1.5rem;

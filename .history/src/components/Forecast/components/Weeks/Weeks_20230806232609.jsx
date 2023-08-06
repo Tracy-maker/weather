@@ -37,12 +37,12 @@ function Weeks() {
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>THU</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>FRI</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>

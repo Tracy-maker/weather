@@ -6,7 +6,8 @@ const ForeCastContainer = styled(Stack)`
   padding: 28px 37px;
 `;
 const Title = styled(Typography)`
-  padding-bottom: 15px;
+
+  padding-bottom: 10px;
 `;
 
 function Forecast() {

@@ -2,12 +2,6 @@ import { Box, Stack, Typography } from "@mui/material";
 import styled from "styled-components";
 import ImageIcon from "../ImageIcons/ImageIcon";
 
-const ForeCastContainer = styled(Box)`
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 const FutureTemperature = styled(Typography)`
   padding-left:14px;

@@ -22,27 +22,27 @@ const DailyBox = styled(Stack)`
 function Weeks() {
   return (
     <ForeCastContainer>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>MON</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>TUE</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>WED</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>THU</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={2.3}>
         <Typography>FRI</Typography>
         <ImageIcon />
         <FutureTemperature variant="h6">19゜</FutureTemperature>

@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Card, Stack, Typography } from "@mui/material";
 import styled from "styled-components";
 import ImageIcon from "../ImageIcons/ImageIcon";
 
@@ -12,7 +12,7 @@ const ForeCastContainer = styled(Box)`
 const FutureTemperature = styled(Typography)`
   padding-left:14px;
 `;
-const DailyBox = styled(Stack)`
+const DailyBox = styled(Card)`
   justify-content: center;
   align-items: center;
   margin-right: 1.5rem;

@@ -10,42 +10,42 @@ const ForeCastContainer = styled(Box)`
 `;
 
 const FutureTemperature = styled(Typography)`
-  padding-left:14px;
+  display: flex;
+  color: #696969;
 `;
 const DailyBox = styled(Stack)`
   justify-content: center;
   align-items: center;
-  margin-right: 1.5rem;
-  color: #696969;
+  margin-right: 2.5rem;
 `;
 
 function Weeks() {
   return (
     <ForeCastContainer>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={3}>
         <Typography>MON</Typography>
         <ImageIcon />
-        <FutureTemperature variant="h6">19゜</FutureTemperature>
+        <FutureTemperature variant="body1">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={3}>
         <Typography>TUE</Typography>
         <ImageIcon />
-        <FutureTemperature variant="h6">19゜</FutureTemperature>
+        <FutureTemperature variant="body1">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={3}>
         <Typography>WED</Typography>
         <ImageIcon />
-        <FutureTemperature variant="h6">19゜</FutureTemperature>
+        <FutureTemperature variant="body1">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={3}>
         <Typography>THU</Typography>
         <ImageIcon />
-        <FutureTemperature variant="h6">19゜</FutureTemperature>
+        <FutureTemperature variant="body1">19゜</FutureTemperature>
       </DailyBox>
-      <DailyBox spacing={2}>
+      <DailyBox spacing={3}>
         <Typography>FRI</Typography>
         <ImageIcon />
-        <FutureTemperature variant="h6">19゜</FutureTemperature>
+        <FutureTemperature variant="body1">19゜</FutureTemperature>
       </DailyBox>
     </ForeCastContainer>
   );

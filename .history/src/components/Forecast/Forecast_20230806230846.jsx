@@ -3,10 +3,11 @@ import { Stack, Typography } from "@mui/material";
 import Weeks from "./components/Weeks/Weeks";
 
 const ForeCastContainer = styled(Stack)`
-  padding: 28px 37px;
+  padding: 28px 35px;
 `;
 const Title = styled(Typography)`
-  padding-bottom: 15px;
+
+  padding-bottom: 10px;
 `;
 
 function Forecast() {
