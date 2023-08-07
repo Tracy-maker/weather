@@ -98,7 +98,7 @@ function App() {
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />
-            <Forecast  weathers={Object.values(data)}/>
+            <Forecast  weathers={Object.values(data) }/>
           </CardBottom>
         </CardActionArea>
       </ShowCard>

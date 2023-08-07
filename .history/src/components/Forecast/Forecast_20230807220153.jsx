@@ -12,7 +12,7 @@ const Title = styled(Typography)`
 `;
 const MEL_CITY_ID="2158177";
 
-function Forecast({weathers}) {
+function Forecast() {
   const [data,setData]=useState();
 
   useEffect(()=>{
@@ -22,7 +22,7 @@ function Forecast({weathers}) {
   return (
     <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      <Weeks weather={weathers}/>
+      <Weeks />
     </ForeCastContainer>
   );
 }

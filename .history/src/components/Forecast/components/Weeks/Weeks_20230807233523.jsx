@@ -21,6 +21,8 @@ const DailyBox = styled(Stack)`
 
 const WEEK_DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
+// ... (之前的代码)
+
 function Weeks({ weather }) {
   const dayInAWeek = new Date().getDay();
   const startIndex = (dayInAWeek + 1) % 7;
@@ -30,7 +32,7 @@ function Weeks({ weather }) {
     <ForeCastContainer>
       {forecastDays.map((day, index) => (
         <DailyBox key={index} spacing={2}>
-          <Typography>{day[index]}</Typography>
+          <Typography>{day}</Typography>
           <ImageIcon weather={weather} />
           <FutureTemperature variant="body1">19゜</FutureTemperature>
         </DailyBox>

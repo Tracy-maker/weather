@@ -5,7 +5,7 @@ import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
 import { CardActionArea, Box, Divider, Stack, Typography } from "@mui/material";
 import p1 from "./assets/background1.jpg";
-import { useState, useEffect } from "react";
+import { useState,useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 
 const BackgroundCard = styled(Stack)`
@@ -91,6 +91,7 @@ function App() {
           ) : (
             <City weather={data[cityId]} />
           )}
+
           <CardBottom>
             <OtherCities
               currentCityId={cityId}
@@ -98,7 +99,7 @@ function App() {
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />
-            <Forecast  weathers={Object.values(data)}/>
+            <Forecast />
           </CardBottom>
         </CardActionArea>
       </ShowCard>
