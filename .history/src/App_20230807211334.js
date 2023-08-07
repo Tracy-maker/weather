@@ -5,6 +5,7 @@ import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
 import { CardActionArea, Box, Divider, Stack, Typography } from "@mui/material";
 import p1 from "./assets/background1.jpg";
+import p3 from "./assets/loading.jpg"
 import { useState } from "react";
 import { useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
@@ -39,9 +40,13 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-const LoadingData = styled(Typography)`
-  text-align: center;
-`;
+const LoadingData =styled(Typography)`
+text-align: center;
+background-image: url(${p3});
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+`
 
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 

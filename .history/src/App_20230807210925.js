@@ -39,9 +39,9 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-const LoadingData = styled(Typography)`
-  text-align: center;
-`;
+const LoadingData =styled(Typography)`
+text-align: center;
+`
 
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
