@@ -30,7 +30,7 @@ function Weeks({ weather }) {
     <ForeCastContainer>
       {forecastDays.map((day, index) => (
         <DailyBox key={index} spacing={2}>
-          <Typography>{day}</Typography>
+          <Typography>{day[index]}</Typography>
           <ImageIcon weather={weather} />
           <FutureTemperature variant="body1">19゜</FutureTemperature>
         </DailyBox>
