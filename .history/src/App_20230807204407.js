@@ -83,8 +83,8 @@ function App() {
     <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-        {loading ? <Typography>Loading weather data...</Typography> :   <City weather={data[cityId]} />}
-        
+        {loading ? <Typography>Loading weather data...</Typography> : null}
+          <City weather={data[cityId]} />
           <CardBottom>
             <OtherCities
               currentCityId={cityId}

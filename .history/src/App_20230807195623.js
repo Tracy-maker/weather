@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Box, Divider, Stack,Typography } from "@mui/material";
+import { CardActionArea, Box, Divider, Stack } from "@mui/material";
 import p1 from "./assets/background1.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -45,46 +45,30 @@ function App() {
   const [cityId, setCityId] = useState(2158177);
   const [data, setData] = useState({});
   const [loading,setLoading]=useState(true);
-  const [timeoutId,setTimeoutId]=useState(null);
-
-  useEffect(()=>{
-    const newTimeoutId= setTimeout(()=>{
-      setLoading(false);
-    },1000);
-
-    setTimeoutId(newTimeoutId);
-
+  
+  useEffect(() => {
     CITY_IDS.forEach((id) => {
-      getWeather(id)
-        .then((weatherData) => {
-          setData((prevData) => ({
-            ...prevData,
-            [id]: weatherData,
-          }));
-        })
-        .finally(() => {
-          clearTimeout(newTimeoutId);
-        });
+      getWeather(id).then((data) => {
+        setData((prevData) => ({
+          ...prevData,
+          [id]: data,
+        }));
+      });
     });
-
-    return () => {
-      clearTimeout(newTimeoutId); 
-    };
   }, []);
 
-  useEffect(() => {
-    if (Object.keys(data).length > 0) {
-      setLoading(false);
-      clearTimeout(timeoutId); 
+  useEffect(()=>{
+    if(!data){
+      return;
     }
-  }, [data, timeoutId]);
+    set
+  })
 
   return (
     <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-        {loading ? <Typography>Loading weather data...</Typography> :   <City weather={data[cityId]} />}
-        
+          <City weather={data[cityId]}/>
           <CardBottom>
             <OtherCities
               currentCityId={cityId}

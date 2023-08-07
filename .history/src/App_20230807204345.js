@@ -63,28 +63,30 @@ function App() {
           }));
         })
         .finally(() => {
-          clearTimeout(newTimeoutId);
+          clearTimeout(newTimeoutId); // Clear the timeout when data is fetched
         });
     });
 
     return () => {
-      clearTimeout(newTimeoutId); 
+      clearTimeout(newTimeoutId); // Cleanup: Clear the timeout if the component unmounts
     };
   }, []);
 
   useEffect(() => {
     if (Object.keys(data).length > 0) {
       setLoading(false);
-      clearTimeout(timeoutId); 
+      clearTimeout(timeoutId); // Clear the timeout when data is loaded
     }
   }, [data, timeoutId]);
+
+  // ... (rest of your code)
 
   return (
     <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-        {loading ? <Typography>Loading weather data...</Typography> :   <City weather={data[cityId]} />}
-        
+        {loading ? <Typography>Loading weather data...</Typography> : null}
+          <City weather={data[cityId]} />
           <CardBottom>
             <OtherCities
               currentCityId={cityId}

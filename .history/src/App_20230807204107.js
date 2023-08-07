@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Box, Divider, Stack,Typography } from "@mui/material";
+import { CardActionArea, Box, Divider, Stack } from "@mui/material";
 import p1 from "./assets/background1.jpg";
 import { useState } from "react";
 import { useEffect } from "react";
@@ -63,28 +63,30 @@ function App() {
           }));
         })
         .finally(() => {
-          clearTimeout(newTimeoutId);
+          clearTimeout(newTimeoutId); // Clear the timeout when data is fetched
         });
     });
 
     return () => {
-      clearTimeout(newTimeoutId); 
+      clearTimeout(newTimeoutId); // Cleanup: Clear the timeout if the component unmounts
     };
   }, []);
 
   useEffect(() => {
     if (Object.keys(data).length > 0) {
       setLoading(false);
-      clearTimeout(timeoutId); 
+      clearTimeout(timeoutId); // Clear the timeout when data is loaded
     }
   }, [data, timeoutId]);
+
+  // ... (rest of your code)
 
   return (
     <BackgroundCard>
       <ShowCard>
         <CardActionArea>
-        {loading ? <Typography>Loading weather data...</Typography> :   <City weather={data[cityId]} />}
-        
+        {loading ? <p>Loading...</p> : null}
+          <City weather={data[cityId]} />
           <CardBottom>
             <OtherCities
               currentCityId={cityId}
