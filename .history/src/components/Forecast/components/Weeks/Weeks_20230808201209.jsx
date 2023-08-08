@@ -15,7 +15,7 @@ const FutureTemperature = styled(Typography)`
 const DailyBox = styled(Stack)`
   justify-content: center;
   align-items: center;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   color: #696969;
 `;
 
@@ -33,7 +33,7 @@ function Weeks({ dailyForecast }) {
         <DailyBox key={index} spacing={2}>
           <Typography>{forecastDays[index]}</Typography>
           <ImageIcon weather={item.weather[0]} />
-          <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(0)}゜`}</FutureTemperature>
+          <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(1)}゜`}</FutureTemperature>
         </DailyBox>
       ))}
     </ForeCastContainer>
