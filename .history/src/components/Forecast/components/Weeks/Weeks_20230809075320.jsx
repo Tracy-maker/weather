@@ -10,7 +10,7 @@ const ForeCastContainer = styled(Box)`
 `;
 
 const FutureTemperature = styled(Typography)`
-  padding-left:0.3rem;
+  padding-left:0.5rem;
 `;
 const DailyBox = styled(Stack)`
   justify-content: center;
