@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 import getDailyForecast from "./utils/getDailyForecast/getDailyForecast";
 
+
 const BackgroundCard = styled(Stack)`
   height: 100vh;
   width: 100%;
@@ -52,26 +53,27 @@ function App() {
   const [dailyForecast, setDailyForecast] = useState([]);
 
   useEffect(() => {
+
+  
     const fetchData = async () => {
       try {
-        const weatherResults = await Promise.all(
-          CITY_IDS.map(async (id) => ({
-            id,
-            weatherData: await getWeather(id),
-            forecastData: await getDailyForecast(id),
-          }))
-        );
+        const weatherResults = await Promise.all(CITY_IDS.map(async id => ({
+          id,
+          weatherData: await getWeather(id),
+          forecastData: await getDailyForecast(id)
+        }))); 
         const newData = {};
-        weatherResults.forEach((result) => {
+        weatherResults.forEach(result => {
           newData[result.id] = result.weatherData;
-        });
+        }); 
         setData(newData);
         setDailyForecast(
           weatherResults
-            .find((result) => result.id === cityId)
+            .find(result => result.id === cityId)
             ?.forecastData?.list.slice(0, 5) || []
         );
         setLoading(false);
+  
       } catch (error) {
         console.error("Error fetching weather data:", error);
         setLoading(false);
@@ -79,7 +81,7 @@ function App() {
     };
     fetchData();
   }, [cityId]);
-
+  
   return (
     <BackgroundCard>
       <ShowCard>
