@@ -9,7 +9,7 @@ function ImageIcon({weather}) {
   return (
     <Image
       src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`}
-      alt={weather.main}
+      alt={weather[0].main}
     />
   );
 }

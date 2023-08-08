@@ -26,7 +26,7 @@ function Weeks({ weather }) {
   const startIndex = dayInAWeek % 7;
   const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
 
-  console.log(forecastDays)
+
 
   return (
     <ForeCastContainer>

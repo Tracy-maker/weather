@@ -8,7 +8,7 @@ const Image = styled.img`
 function ImageIcon({weather}) {
   return (
     <Image
-      src={`http://openweathermap.org/img/wn/${weather[0].icon}.png`}
+      src={`http://openweathermap.org/img/wn/${weather.icon[0]}.png`}
       alt={weather.main}
     />
   );
