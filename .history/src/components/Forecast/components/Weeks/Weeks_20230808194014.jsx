@@ -29,7 +29,7 @@ function Weeks({ dailyForecast,forecastDays }) {
         <DailyBox key={index} spacing={2}>
           <Typography>{day}</Typography>
           <ImageIcon weather={dailyForecast} />
-          <FutureTemperature variant="body1">{`${parseFloat(dailyForecast.temperature).toFixed(0)}゜`}</FutureTemperature>
+          <FutureTemperature variant="body1">{`${parseFloat(dailyForecast.main.temperature).toFixed(0)}゜`}</FutureTemperature>
         </DailyBox>
       ))}
     </ForeCastContainer>
