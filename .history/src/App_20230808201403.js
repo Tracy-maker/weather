@@ -8,7 +8,6 @@ import p1 from "./assets/background1.jpg";
 import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 import getDailyForecast from "./utils/getDailyForecast/getDailyForecast";
-import { useCallback } from "react";
 
 const BackgroundCard = styled(Stack)`
   height: 100vh;
@@ -53,54 +52,47 @@ function App() {
   const [timeoutId, setTimeoutId] = useState(null);
   const [dailyForecast, setDailyForecast] = useState([]);
 
-  const fetchData = useCallback(async () => {
+  useEffect(() => {
     const newTimeoutId = setTimeout(() => {
       setLoading(false);
     }, 1000);
 
     setTimeoutId(newTimeoutId);
 
-    const weatherPromises = CITY_IDS.map(async (id) => {
-      const [weatherData, forecastData] = await Promise.all([
-        getWeather(id),
-        getDailyForecast(id),
-      ]);
-
-      return { id, weatherData, forecastData };
+    CITY_IDS.forEach((id) => {
+      getWeather(id)
+        .then((weatherData) => {
+          setData((prevData) => ({
+            ...prevData,
+            [id]: weatherData,
+          }));
+        })
+        .finally(() => {
+          clearTimeout(newTimeoutId);
+        });
     });
 
-    try {
-      const weatherResults = await Promise.all(weatherPromises);
-
-      const newData = {};
-      weatherResults.forEach((result) => {
-        newData[result.id] = result.weatherData;
-      });
-
-      setData(newData);
-      setDailyForecast(
-        weatherResults
-          .find((result) => result.id === cityId)
-          ?.forecastData?.list.slice(0, 5) || []
-      );
-
+    return () => {
       clearTimeout(newTimeoutId);
-    } catch (error) {
-      console.error("Error fetching weather data:", error);
-      clearTimeout(newTimeoutId);
-    }
-  },[cityId]);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
+    };
+  }, []);
 
   useEffect(() => {
     if (Object.keys(data).length > 0) {
       setLoading(false);
       clearTimeout(timeoutId);
     }
-  }, [data, timeoutId, cityId]);
+  }, [data, timeoutId]);
+
+  useEffect(() => {
+    getDailyForecast(cityId)
+      .then((response) => {
+        setDailyForecast(response.list.slice(0, 5));
+      })
+      .catch((error) => {
+        console.error("Error fetching daily forecast:", error);
+      });
+  }, []);
 
   return (
     <BackgroundCard>
@@ -118,7 +110,7 @@ function App() {
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />
-            <Forecast dailyForecast={dailyForecast} currentCityId={cityId} />
+            <Forecast dailyForecast={dailyForecast}  currentCityId={cityId} />
           </CardBottom>
         </CardActionArea>
       </ShowCard>

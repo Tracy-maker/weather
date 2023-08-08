@@ -8,7 +8,6 @@ import p1 from "./assets/background1.jpg";
 import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 import getDailyForecast from "./utils/getDailyForecast/getDailyForecast";
-import { useCallback } from "react";
 
 const BackgroundCard = styled(Stack)`
   height: 100vh;

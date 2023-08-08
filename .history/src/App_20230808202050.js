@@ -8,7 +8,6 @@ import p1 from "./assets/background1.jpg";
 import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 import getDailyForecast from "./utils/getDailyForecast/getDailyForecast";
-import { useCallback } from "react";
 
 const BackgroundCard = styled(Stack)`
   height: 100vh;
@@ -53,7 +52,7 @@ function App() {
   const [timeoutId, setTimeoutId] = useState(null);
   const [dailyForecast, setDailyForecast] = useState([]);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = async () => {
     const newTimeoutId = setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -89,11 +88,11 @@ function App() {
       console.error("Error fetching weather data:", error);
       clearTimeout(newTimeoutId);
     }
-  },[cityId]);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [fetchData]);
+  }, []);
 
   useEffect(() => {
     if (Object.keys(data).length > 0) {
