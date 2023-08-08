@@ -34,6 +34,7 @@ function Weeks({ dailyForecast }) {
           <Typography>{forecastDays[index]}</Typography>
           <ImageIcon weather={item.weather[0]} />
           <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(0)}゜`}</FutureTemperature>
+
         </DailyBox>
       ))}
     </ForeCastContainer>

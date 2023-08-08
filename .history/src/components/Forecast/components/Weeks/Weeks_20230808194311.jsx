@@ -29,11 +29,11 @@ function Weeks({ dailyForecast }) {
 
   return (
     <ForeCastContainer>
-      {dailyForecast.map((item, index) => (
+      {forecastDays.map((day, index) => (
         <DailyBox key={index} spacing={2}>
-          <Typography>{forecastDays[index]}</Typography>
-          <ImageIcon weather={item.weather[0]} />
-          <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(0)}゜`}</FutureTemperature>
+          <Typography>{day}</Typography>
+          <ImageIcon weather={dailyForecast} />
+          <FutureTemperature variant="body1">{`${parseFloat(dailyForecast.temperature).toFixed(0)}゜`}</FutureTemperature>
         </DailyBox>
       ))}
     </ForeCastContainer>
