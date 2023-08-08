@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
 import getDailyForecast from "./utils/getDailyForecast/getDailyForecast";
 import { useCallback } from "react";
+import useWeatherData from "./utils/useWeatherData/useWeatherData";
 
 const BackgroundCard = styled(Stack)`
   height: 100vh;
@@ -50,49 +51,20 @@ function App() {
   const [cityId, setCityId] = useState(2158177);
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [timeoutId, setTimeoutId] = useState(null);
   const [dailyForecast, setDailyForecast] = useState([]);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
+    useWeatherData();
+  }, [useWeatherData]);
+
+  useEffect(() => {
+    if (Object.keys(data).length > 0) {
       setLoading(false);
-    }, 1000);
-  
-    const fetchData = async () => {
-      try {
-        const weatherResults = await Promise.all(CITY_IDS.map(async id => ({
-          id,
-          weatherData: await getWeather(id),
-          forecastData: await getDailyForecast(id)
-        })));
-  
-        const newData = {};
-        weatherResults.forEach(result => {
-          newData[result.id] = result.weatherData;
-        });
-  
-        setData(newData);
-        setDailyForecast(
-          weatherResults
-            .find(result => result.id === cityId)
-            ?.forecastData?.list.slice(0, 5) || []
-        );
-  
-        setLoading(false);
-        clearTimeout(timeoutId);
-      } catch (error) {
-        console.error("Error fetching weather data:", error);
-        setLoading(false);
-        clearTimeout(timeoutId);
-      }
-    };
-  
-    fetchData();
-  
-    return () => {
       clearTimeout(timeoutId);
-    };
-  }, [cityId]);
-  
+    }
+  }, [data, timeoutId, cityId]);
+
   return (
     <BackgroundCard>
       <ShowCard>

@@ -50,6 +50,7 @@ function App() {
   const [cityId, setCityId] = useState(2158177);
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [timeoutId, setTimeoutId] = useState(null);
   const [dailyForecast, setDailyForecast] = useState([]);
 
   useEffect(() => {
