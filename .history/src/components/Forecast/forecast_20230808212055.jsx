@@ -14,7 +14,7 @@ function Forecast({ dailyForecast, currentCityId }) {
   return (
     <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      {dailyForecast.forEach(( id ) => {
+      {dailyForecast.map(({ id }) => {
         if (currentCityId === id) {
           return null; // Skip rendering for the current city
         }

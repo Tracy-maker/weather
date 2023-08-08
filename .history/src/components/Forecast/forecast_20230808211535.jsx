@@ -14,12 +14,12 @@ function Forecast({ dailyForecast, currentCityId }) {
   return (
     <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      {dailyForecast.forEach(( id ) => {
+      {dailyForecast.map(({ id, weather: [weather], main: { temp: temperature } }) => {
         if (currentCityId === id) {
           return null; // Skip rendering for the current city
         }
+        return <Weeks key={id} dailyForecast={dailyForecast} />; // Render Weeks component for each item
       })}
-      <Weeks dailyForecast={dailyForecast} />;
     </ForeCastContainer>
   );
 }
