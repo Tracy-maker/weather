@@ -6,7 +6,7 @@ const ForeCastContainer = styled(Box)`
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 `;
 
 const FutureTemperature = styled(Typography)`
@@ -15,13 +15,18 @@ const FutureTemperature = styled(Typography)`
 const DailyBox = styled(Stack)`
   justify-content: center;
   align-items: center;
-  margin-right: 1rem;
+  margin-right: 1.2rem;
   color: #696969;
 `;
 
+const WEEK_DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
+function Weeks({ weather,temperature }) {
+  const dayInAWeek = new Date().getDay();
+  const startIndex = dayInAWeek % 7;
+  const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
 
-function Weeks({ weather,temperature,forecastDays }) {
+  console.log(forecastDays)
 
   return (
     <ForeCastContainer>

@@ -20,7 +20,6 @@ const DailyBox = styled(Stack)`
 `;
 
 
-
 function Weeks({ weather,temperature,forecastDays }) {
 
   return (

@@ -19,9 +19,14 @@ const DailyBox = styled(Stack)`
   color: #696969;
 `;
 
+const WEEK_DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
 
+function Weeks({ weather,temperature }) {
+  const dayInAWeek = new Date().getDay();
+  const startIndex = dayInAWeek % 7;
+  const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
 
-function Weeks({ weather,temperature,forecastDays }) {
+  console.log(forecastDays)
 
   return (
     <ForeCastContainer>

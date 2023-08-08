@@ -30,7 +30,7 @@ function Forecast({weathers}) {
   return (
     <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      <Weeks weather={weathers} forecastDays={forecastDays}/>
+      <Weeks weather={weathers}/>
     </ForeCastContainer>
   );
 }
