@@ -20,22 +20,20 @@ const DailyBox = styled(Stack)`
 `;
 
 
-const WEEK_DAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-
+const WEEK_DAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 function Weeks({ dailyForecast }) {
+
   const dayInAWeek = new Date().getDay();
-  const startIndex = (dayInAWeek + 1) % 7;
-  const forecastDays = [
-    ...WEEK_DAYS.slice(startIndex),
-    ...WEEK_DAYS.slice(0, startIndex)
-  ].slice(0, 5);
+  const startIndex = dayInAWeek % 7;
+  const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
+
   return (
     <ForeCastContainer>
-      {dailyForecast.slice(0, 5).map((item, index) => (
+      {dailyForecast.map((item, index) => (
         <DailyBox key={index} spacing={2}>
           <Typography>{forecastDays[index]}</Typography>
           <ImageIcon weather={item.weather[0]} />
-          <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(0)}°`}</FutureTemperature>
+          <FutureTemperature variant="body1">{`${parseFloat(item.main.temp).toFixed(0)}゜`}</FutureTemperature>
         </DailyBox>
       ))}
     </ForeCastContainer>

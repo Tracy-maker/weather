@@ -25,10 +25,8 @@ const WEEK_DAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 function Weeks({ dailyForecast }) {
   const dayInAWeek = new Date().getDay();
   const startIndex = (dayInAWeek + 1) % 7;
-  const forecastDays = [
-    ...WEEK_DAYS.slice(startIndex),
-    ...WEEK_DAYS.slice(0, startIndex)
-  ].slice(0, 5);
+  const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
+
   return (
     <ForeCastContainer>
       {dailyForecast.slice(0, 5).map((item, index) => (
