@@ -10,7 +10,7 @@ const Title = styled(Typography)`
 `;
 
 const WEEK_DAYS = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
-function Forecast({ weathers}) {
+function Forecast({ weathers,dailyForecast}) {
   const dayInAWeek = new Date().getDay();
   const startIndex = dayInAWeek % 7;
   const forecastDays = WEEK_DAYS.slice(startIndex, startIndex + 5);
@@ -18,7 +18,7 @@ function Forecast({ weathers}) {
   return (
     <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      <Weeks weather={weathers} forecastDays={forecastDays} />
+      <Weeks weather={weathers} forecastDays={forecastDays.dailyForecast} />
     </ForeCastContainer>
   );
 }

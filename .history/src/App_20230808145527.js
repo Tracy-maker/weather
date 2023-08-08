@@ -84,7 +84,7 @@ function App() {
     }
   }, [data, timeoutId]);
   useEffect(() => {
-
+    // Fetch daily forecast for the main city
     getDailyForecast(cityId)
       .then((response) => {
         setDailyForecast(response.list.slice(0, 5));

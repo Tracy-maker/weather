@@ -84,7 +84,7 @@ function App() {
     }
   }, [data, timeoutId]);
   useEffect(() => {
-
+    // Fetch daily forecast for the main city
     getDailyForecast(cityId)
       .then((response) => {
         setDailyForecast(response.list.slice(0, 5));
@@ -110,10 +110,7 @@ function App() {
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />
-            <Forecast
-              weathers={Object.values(data)}
-              dailyForecast={dailyForecast}
-            />
+            <Forecast weathers={Object.values(data)}/>
           </CardBottom>
         </CardActionArea>
       </ShowCard>

@@ -50,7 +50,6 @@ function App() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
   const [timeoutId, setTimeoutId] = useState(null);
-  const [dailyForecast, setDailyForecast] = useState([]);
 
   useEffect(() => {
     const newTimeoutId = setTimeout(() => {
@@ -83,17 +82,9 @@ function App() {
       clearTimeout(timeoutId);
     }
   }, [data, timeoutId]);
-  useEffect(() => {
-
-    getDailyForecast(cityId)
-      .then((response) => {
-        setDailyForecast(response.list.slice(0, 5));
-      })
-      .catch((error) => {
-        console.error("Error fetching daily forecast:", error);
-      });
-  }, []);
-
+  useEffect(()=>{
+    getDailyForecast(cityId).then((response)=> console.log(response));
+  },[]);
   return (
     <BackgroundCard>
       <ShowCard>
@@ -110,10 +101,7 @@ function App() {
               onCityClick={(id) => setCityId(id)}
             />
             <DividerLine />
-            <Forecast
-              weathers={Object.values(data)}
-              dailyForecast={dailyForecast}
-            />
+            <Forecast weathers={Object.values(data)}/>
           </CardBottom>
         </CardActionArea>
       </ShowCard>
