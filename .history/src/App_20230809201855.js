@@ -19,7 +19,6 @@ const BackgroundCard = styled(Stack)`
   background-image: url(${p1});
   background-size: cover;
   background-repeat: no-repeat;
-  }
 `;
 
 const ShowCard = styled(Box)`

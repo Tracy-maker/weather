@@ -30,6 +30,12 @@ const ShowCard = styled(Box)`
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
+
+  @media screen and (min-width: 1024px) {
+    margin: 100px auto;
+    padding: 36px;
+    border-radius: 24px;
+  }
 `;
 const CardBottom = styled(Box)`
   display: flex;

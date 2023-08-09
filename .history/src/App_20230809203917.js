@@ -19,6 +19,11 @@ const BackgroundCard = styled(Stack)`
   background-image: url(${p1});
   background-size: cover;
   background-repeat: no-repeat;
+  
+  @media screen and (min-width: 1024px) {
+    margin: 100px auto;
+    padding: 36px;
+    border-radius: 24px;
   }
 `;
 
