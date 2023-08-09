@@ -43,7 +43,7 @@ const LoadingData = styled(Box)`
   text-align: center;
   font-size: 4rem;
   font-weight: bold;
-  color:white`;
+`;
 
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 

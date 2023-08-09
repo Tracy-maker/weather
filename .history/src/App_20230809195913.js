@@ -39,11 +39,10 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-const LoadingData = styled(Box)`
+const LoadingData = styled(Typewriter)`
   text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  color:white`;
+  font-size: 2rem;
+`;
 
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
@@ -85,15 +84,15 @@ function App() {
   return (
     <BackgroundCard>
       {loading ? (
-        <LoadingData>
-          <Typewriter
+        <Box>
+          <LoadingData
             options={{
               strings: ["Loading Weather Data......"],
               autoStart: true,
               loop: true,
             }}
           />
-        </LoadingData>
+        </Box>
       ) : (
         <ShowCard>
           <CardActionArea>

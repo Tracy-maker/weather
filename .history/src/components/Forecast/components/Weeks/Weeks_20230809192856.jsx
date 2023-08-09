@@ -15,7 +15,7 @@ const FutureTemperature = styled(Typography)`
 const DailyBox = styled(Stack)`
   justify-content: center;
   align-items: center;
-  margin-right: 2.2rem;
+  margin-right: 2rem;
   color: #696969;
 `;
 

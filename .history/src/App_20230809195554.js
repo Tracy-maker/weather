@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import City from "./components/City/City";
 import OtherCities from "./components/OtherCities/OtherCities";
 import Forecast from "./components/Forecast/Forecast";
-import { CardActionArea, Box, Divider, Stack } from "@mui/material";
+import { CardActionArea, Box, Divider, Stack, Typography } from "@mui/material";
 import p1 from "./assets/background1.jpg";
 import { useState, useEffect } from "react";
 import getWeather from "./utils/getWeather/getWeather";
@@ -38,12 +38,10 @@ const DividerLine = styled(Divider)`
   width: 5px;
   background: rgba(225, 225, 225, 0.7);
 `;
-
-const LoadingData = styled(Box)`
+const LoadingBox = styled(Box)``;
+const LoadingData = styled(Typewriter)`
   text-align: center;
-  font-size: 4rem;
-  font-weight: bold;
-  color:white`;
+`;
 
 const CITY_IDS = [2158177, 2147714, 2174003, 2063523];
 
@@ -85,19 +83,20 @@ function App() {
   return (
     <BackgroundCard>
       {loading ? (
-        <LoadingData>
+        <LoadingBox>
           <Typewriter
             options={{
-              strings: ["Loading Weather Data......"],
+              strings: ["Hello", "World"],
               autoStart: true,
               loop: true,
             }}
           />
-        </LoadingData>
+        </LoadingBox>
       ) : (
         <ShowCard>
           <CardActionArea>
             <City weather={data[cityId]} />
+
             <CardBottom>
               <OtherCities
                 currentCityId={cityId}

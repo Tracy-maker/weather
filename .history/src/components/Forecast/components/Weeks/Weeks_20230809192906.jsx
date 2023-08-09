@@ -10,12 +10,12 @@ const ForeCastContainer = styled(Box)`
 `;
 
 const FutureTemperature = styled(Typography)`
-  padding-left: 0.3rem;
+  padding-left: 0.5rem;
 `;
 const DailyBox = styled(Stack)`
   justify-content: center;
   align-items: center;
-  margin-right: 2.2rem;
+  margin-right: 2rem;
   color: #696969;
 `;
 
