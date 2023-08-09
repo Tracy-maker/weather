@@ -6,7 +6,7 @@ import App from "./App";
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'Montserrat', 
+    fontFamily: 'Montserrat', // Replace 'Open Sans' with the font name
   },
 });
 
