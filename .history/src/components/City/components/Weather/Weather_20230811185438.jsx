@@ -4,11 +4,6 @@ import { Box } from "@mui/material";
 
 const Temperature = styled(Box)`
   font-size: 5rem;
-  @media screen and (min-width: 1024px){
-    margin: 0;
-    text-align: center;
-    font-size: 5rem;
-  }
 `;
 
 const Condition = styled(Box)`

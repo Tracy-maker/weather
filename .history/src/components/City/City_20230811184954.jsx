@@ -8,7 +8,7 @@ const CardContentTop = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 64px 96px;
+  padding: 64px 0px;
   background-image: url(${p2});
   background-size: cover;
   over-flow: hidden;

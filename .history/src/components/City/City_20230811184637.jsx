@@ -15,8 +15,8 @@ const CardContentTop = styled(Box)`
   color: white;
   position: relative;
   @media screen and (min-width: 1024px){
-    flex-direction: row;
-    padding: 64px 50px;
+    flex-direction: space-around;
+    padding: 64px 0;
   }
 `;
 const Strip = styled(Box)`

@@ -6,8 +6,8 @@ const DetailsContainer = styled(Box)`
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 1024px) {
-    padding: 0 30px;
+  @media screen and (min-width: 800px) {
+    padding: 0 40px;
   }
 `;
 

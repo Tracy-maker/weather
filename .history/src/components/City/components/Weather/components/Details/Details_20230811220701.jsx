@@ -2,13 +2,12 @@ import styled from "styled-components";
 import { Box, Divider } from "@mui/material";
 import Item from "./components/Item/Item";
 
+
 const DetailsContainer = styled(Box)`
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 1024px) {
-    padding: 0 30px;
-  }
+  @media screen and (min-width: 1024px)
 `;
 
 const DividerLine = styled(Divider)`
@@ -16,7 +15,8 @@ const DividerLine = styled(Divider)`
   background: rgba(225, 225, 225, 0.7);
 `;
 
-function Details({ humidity, wind }) {
+function Details({humidity,wind}) {
+
   return (
     <DetailsContainer>
       <Item title="HUMIDITY">{`${humidity}%`}</Item>

@@ -7,7 +7,10 @@ const DetailsContainer = styled(Box)`
   display: flex;
   justify-content: space-between;
   @media screen and (min-width: 1024px) {
-    padding: 0 30px;
+    padding: 0 96px;
+    flex: 1;
+    order: 1;
+    justify-content: flex-end;
   }
 `;
 

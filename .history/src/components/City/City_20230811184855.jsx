@@ -16,7 +16,7 @@ const CardContentTop = styled(Box)`
   position: relative;
   @media screen and (min-width: 1024px){
     flex-direction: row;
-    padding: 64px 50px;
+    padding: 64px 20px;
   }
 `;
 const Strip = styled(Box)`

@@ -3,11 +3,15 @@ import { Box, Divider } from "@mui/material";
 import Item from "./components/Item/Item";
 
 const DetailsContainer = styled(Box)`
-  margin-top: 32px;
+  padding: 0 24px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  order: -1;
   @media screen and (min-width: 1024px) {
-    padding: 0 30px;
+    padding: 0 96px;
+    flex: 1;
+    order: 1;
+    justify-content: flex-end;
   }
 `;
 

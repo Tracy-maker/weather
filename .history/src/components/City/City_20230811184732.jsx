@@ -8,7 +8,7 @@ const CardContentTop = styled(Box)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 64px 96px;
+  padding: 60px 96px;
   background-image: url(${p2});
   background-size: cover;
   over-flow: hidden;
@@ -16,7 +16,7 @@ const CardContentTop = styled(Box)`
   position: relative;
   @media screen and (min-width: 1024px){
     flex-direction: row;
-    padding: 64px 50px;
+    padding: 64px 0;
   }
 `;
 const Strip = styled(Box)`
