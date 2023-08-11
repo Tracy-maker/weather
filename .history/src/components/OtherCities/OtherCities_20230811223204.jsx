@@ -7,6 +7,7 @@ const OtherCitiesContainer = styled(Stack)`
   @media screen and (min-width: 1024px) {
       padding: 20px 40px;
       border: 0;
+      display: block;
     }
 `;
 const Title = styled(Typography)`

@@ -8,7 +8,7 @@ const CityList = styled(Paper)`
   align-items: center;
   cursor: pointer;
   @media screen and (min-width: 1024px) {
-      font-size: 1.5rem;
+      display: block;
     }
 `;
 

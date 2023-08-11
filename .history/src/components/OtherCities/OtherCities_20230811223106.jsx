@@ -5,6 +5,7 @@ import City from "./components/City/City";
 const OtherCitiesContainer = styled(Stack)`
   padding: 28px 35px;
   @media screen and (min-width: 1024px) {
+   
       padding: 20px 40px;
       border: 0;
     }

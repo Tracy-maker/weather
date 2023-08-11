@@ -7,9 +7,6 @@ const CityList = styled(Paper)`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  @media screen and (min-width: 1024px) {
-      font-size: 1.5rem;
-    }
 `;
 
 const CityName = styled(Typography)`
