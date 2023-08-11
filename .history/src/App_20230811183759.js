@@ -35,8 +35,8 @@ const CardBottom = styled(Box)`
   display: flex;
   @media screen and (min-width: 1024px) {
     flex-direction: row;
-    padding: 25px 0;
-  }
+    padding: 36px 0;
+  }Í
 `;
 
 const DividerLine = styled(Divider)`

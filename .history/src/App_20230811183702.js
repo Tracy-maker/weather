@@ -33,16 +33,16 @@ const ShowCard = styled(Box)`
 `;
 const CardBottom = styled(Box)`
   display: flex;
-  @media screen and (min-width: 1024px) {
+  media screen and (min-width: 1024px){
     flex-direction: row;
-    padding: 25px 0;
+    padding: 36px 0;
   }
 `;
 
 const DividerLine = styled(Divider)`
   width: 5px;
   background: rgba(225, 225, 225, 0.7);
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px){
     display: block;
   }
 `;
