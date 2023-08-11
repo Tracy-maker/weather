@@ -6,8 +6,6 @@ const ForeCastContainer = styled(Stack)`
   padding: 28px 37px;
   @media screen and (min-width: 1024px){
     padding: 20px 35px;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
   }
 `;
 
