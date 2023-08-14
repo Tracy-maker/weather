@@ -7,7 +7,6 @@ const DetailsContainer = styled(Box)`
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
-  @media screen and (min-width: 1024px)
 `;
 
 const DividerLine = styled(Divider)`

@@ -11,7 +11,7 @@ const CardContentTop = styled(Box)`
   padding: 64px 96px;
   background-image: url(${p2});
   background-size: cover;
-  overflow: hidden;
+  over-flow: hidden;
   color: white;
   position: relative;
 `;

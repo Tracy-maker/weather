@@ -4,11 +4,6 @@ import City from "./components/City/City";
 
 const OtherCitiesContainer = styled(Stack)`
   padding: 28px 35px;
-  @media screen and (min-width: 1024px) {
-   
-      padding: 0 48px;
-      border: 0;
-    }
 `;
 const Title = styled(Typography)`
   text-align: center;
