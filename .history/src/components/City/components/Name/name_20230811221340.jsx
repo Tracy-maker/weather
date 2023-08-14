@@ -16,14 +16,6 @@ const CityName = styled(Box)`
     width: 50%;
     height: 2px;
     background-color: white;
-    @media screen and (min-width: 1024px){
-      margin-top: 1rem;
-    height: 3px;
-    }
-  }
-  @media screen and (min-width: 1024px){
-    margin-top: 16px;
-    font-weight: 500;
   }
 `;
 function Name({name}) {
