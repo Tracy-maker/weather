@@ -19,9 +19,6 @@ const BackgroundCard = styled(Stack)`
   background-image: url(${p1});
   background-size: cover;
   background-repeat: no-repeat;
-  ${({ theme }) => theme.breakpoints.down('sm')} {
-    background-color: lightblue;
-  }
 `;
 
 const ShowCard = styled(Box)`
