@@ -12,6 +12,9 @@ const Condition = styled(Box)`
   letter-spacing: 5px;
   margin-top: 0.25rem;
   color: rgb(255, 255, 255, 0.7);
+  @media screen and (min-width: 1024px) {
+    padding: 0 100px;
+  }
 `;
 
 function Weather({ temperature, condition, wind, humidity }) {
