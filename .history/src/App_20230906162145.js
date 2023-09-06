@@ -24,18 +24,18 @@ const BackgroundCard = styled(Stack)`
 const ShowCard = styled(Box)`
   margin-left: auto;
   margin-right: auto;
-  max-width: 900px; 
-  width: 90%;
+  max-width: 900px; /* Set a maximum width for larger screens */
+  width: 90%; /* Use a percentage width for smaller screens */
   background-color: white;
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
 
-  @media (min-width: 900px) {
-   
+  @media (max-width: 768px) {
+    /* Adjust styles for screens with a maximum width of 768px (e.g., tablets) */
     width: 100%;
-    border-radius: 0; 
-    box-shadow: none; 
+    border-radius: 0; /* Remove border-radius for smaller screens */
+    box-shadow: none; /* Remove box-shadow for smaller screens */
   }
 `;
 const CardBottom = styled(Box)`

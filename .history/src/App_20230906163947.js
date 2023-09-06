@@ -31,7 +31,7 @@ const ShowCard = styled(Box)`
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
 
-  @media (min-width: 900px) {
+  @media (max-width: 900px) {
    
     width: 100%;
     border-radius: 0; 
