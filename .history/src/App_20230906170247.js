@@ -24,11 +24,19 @@ const BackgroundCard = styled(Stack)`
 const ShowCard = styled(Box)`
   margin-left: auto;
   margin-right: auto;
-  width: 900px;
+  max-width: 900px; 
+  width: 90%;
   background-color: white;
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
   overflow: hidden;
+
+  @media (max-width: 768px) {
+   
+    width: 100%;
+    border-radius: 0; 
+    box-shadow: none; 
+  }
 `;
 const CardBottom = styled(Box)`
   display: flex;

@@ -15,6 +15,7 @@ const CardContentTop = styled(Box)`
   color: white;
   position: relative;
 `;
+
 const Strip = styled(Box)`
   height: 25px;
   background-color: rgba(0, 0, 0, 0.5);
