@@ -5,9 +5,9 @@ import { Box } from "@mui/material";
 import p2 from "../../assets/background2.jpg";
 
 const CardContentTop = styled(Box)`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+ display: flex;
+  flex-direction: column; /* Stack components vertically */
+  align-items: center; /* Center components horizontally */
   padding: 64px 96px;
   background-image: url(${p2});
   background-size: cover;
@@ -16,10 +16,8 @@ const CardContentTop = styled(Box)`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 50px 20px;
+    padding: 40px 20px;
     align-items: flex-start;
-    flex-direction: column; 
-    align-items: center; 
   }
 `;
 

@@ -16,10 +16,11 @@ const CardContentTop = styled(Box)`
   position: relative;
 
   @media (max-width: 768px) {
-    padding: 50px 20px;
+    padding: 40px 20px;
     align-items: flex-start;
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column; /* Stack components vertically */
+  align-items: center; /* Center components horizontally */
+ 
   }
 `;
 
