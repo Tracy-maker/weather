@@ -9,19 +9,17 @@ const Temperature = styled(Box)`
 const Condition = styled(Box)`
   text-align: center;
   font-size: 1.5rem;
-  letter-spacing: 5px;
+  letter-spacing: 50px;
   margin-top: 0.25rem;
   color: rgb(255, 255, 255, 0.7);
 `;
 
-
-function Weather({temperature,condition,wind,humidity}) {
-  
+function Weather({ temperature, condition, wind, humidity }) {
   return (
     <Box>
       <Temperature>{`${temperature}゜`}</Temperature>
       <Condition>{condition}</Condition>
-      <Details wind={wind} humidity={humidity}/>
+      <Details wind={wind} humidity={humidity} />
     </Box>
   );
 }

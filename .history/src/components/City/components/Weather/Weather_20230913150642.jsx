@@ -14,16 +14,13 @@ const Condition = styled(Box)`
   color: rgb(255, 255, 255, 0.7);
 `;
 
-
-function Weather({temperature,condition,wind,humidity}) {
-  
-
+function Weather({ temperature, condition, wind, humidity }) {
   return (
-    <div>
+    <Box>
       <Temperature>{`${temperature}゜`}</Temperature>
       <Condition>{condition}</Condition>
-      <Details wind={wind} humidity={humidity}/>
-    </div>
+      <Details wind={wind} humidity={humidity} />
+    </Box>
   );
 }
 export default Weather;
