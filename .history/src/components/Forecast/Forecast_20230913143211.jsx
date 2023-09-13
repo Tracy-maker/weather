@@ -3,28 +3,20 @@ import { Stack, Typography } from "@mui/material";
 import Weeks from "./components/Weeks/Weeks";
 
 const ForeCastContainer = styled(Stack)`
-  padding: 28px 35px;
-
-  @media (max-width: 768px) {
-    padding: 20px 20px; 
-  }
+  padding: 1px 37px;
 `;
 
 const Title = styled(Typography)`
   padding-bottom: 15px;
-
-  @media (max-width: 768px) {
-    font-size: 1.5rem; 
-  }
 `;
 
 function Forecast({ dailyForecast, currentCityId }) {
   return (
-    <ForeCastContainer spacing={1}>
+    <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
-      {dailyForecast.forEach((id) => {
+      {dailyForecast.forEach(( id ) => {
         if (currentCityId === id) {
-          return null;
+          return null; 
         }
       })}
       <Weeks dailyForecast={dailyForecast} />

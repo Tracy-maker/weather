@@ -20,7 +20,7 @@ const Title = styled(Typography)`
 
 function Forecast({ dailyForecast, currentCityId }) {
   return (
-    <ForeCastContainer spacing={1}>
+    <ForeCastContainer>
       <Title variant="h6">FORECAST</Title>
       {dailyForecast.forEach((id) => {
         if (currentCityId === id) {

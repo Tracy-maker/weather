@@ -14,10 +14,11 @@ const CardContentTop = styled(Box)`
   overflow: hidden;
   color: white;
   position: relative;
-
-  @media (max-width: 768px) {
-    padding: 40px 20px;
-  }
+   
+   @media (max-width:768px) {
+    padding: 40px 20px;;
+    
+   }
 `;
 
 const Strip = styled(Box)`
@@ -28,7 +29,8 @@ const Strip = styled(Box)`
   left: 0;
   right: 0;
 `;
-function City({ weather }) {
+function City({weather}) {
+ 
   return (
     <CardContentTop>
       {weather && (
