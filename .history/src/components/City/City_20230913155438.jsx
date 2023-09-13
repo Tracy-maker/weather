@@ -18,8 +18,8 @@ const CardContentTop = styled(Box)`
   @media (max-width: 768px) {
     padding: 50px 20px;
     align-items: flex-start;
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column-reverse; 
+    align-items: center; 
   }
 `;
 

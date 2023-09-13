@@ -31,14 +31,15 @@ const ShowCard = styled(Box)`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 100%; /* Adjust to 100% width for smaller screens */
   }
 `;
 
 const CardBottom = styled(Box)`
   display: flex;
+  flex-direction: column; /* Stack components vertically on smaller screens */
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column; /* Stack components vertically on smaller screens */
   }
 `;
 

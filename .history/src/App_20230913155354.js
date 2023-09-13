@@ -28,12 +28,14 @@ const ShowCard = styled(Box)`
   background-color: white;
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
+  
   overflow: hidden;
-
   @media (max-width: 768px) {
     width: 100%;
   }
 `;
+
+
 
 const CardBottom = styled(Box)`
   display: flex;

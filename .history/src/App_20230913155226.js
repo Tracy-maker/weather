@@ -28,10 +28,15 @@ const ShowCard = styled(Box)`
   background-color: white;
   border-radius: 35px;
   box-shadow: 0 0 16px rgb(0 0 0 / 90%);
-  overflow: hidden;
-
+  /* Remove overflow: hidden property */
+  /* overflow: hidden; */
   @media (max-width: 768px) {
     width: 100%;
+  }
+`;
+
+  @media (max-width: 768px) {
+    width: 90%;
   }
 `;
 
